@@ -36,7 +36,6 @@
     }
     &.active{
       width: 100%;  
-      background: linear-gradient(90.57deg, #A25DF0 -502.15%, rgba(162, 93, 240, 0) 99.45%);
       position: relative;
       &::before{
         content: '';
@@ -48,6 +47,27 @@
         background: linear-gradient(171.01deg, #FA31E0 0%, #FFFFFF 86.34%), #A25DF0;
         box-shadow: 0px 0px 24px #A25DF0;
       }
+      &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        animation: left-to-right 400ms 1;
+        background: linear-gradient(90.57deg, #A25DF0 -502.15%, rgba(162, 93, 240, 0) 99.45%);
+        left: 0;
+        top: 0;
+        z-index: 0;
+      }
     }
+  }
+}
+
+
+@keyframes left-to-right {
+  from{
+    width: 0;
+  }
+  to{
+    width: 100%;
   }
 }
