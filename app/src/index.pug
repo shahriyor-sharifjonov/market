@@ -14,7 +14,12 @@ html(lang="en")
     include components/header.pug 
     +header
     .wrapper
-      include components/menu.pug 
-      +menu('index')
+      aside.left-sideber 
+        include components/menu.pug 
+        +menu('index')
+      main.main 
+        p main
+      aside.right-sidebar
+        p right sidebar
 
     script(src="scripts/index.js") 
