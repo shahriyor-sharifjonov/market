@@ -3,6 +3,7 @@
   border-radius: 18px;
   max-width: 250px;
   width: 100%;
+  margin-bottom: 30px;
   &__list{
     list-style-type: none;
     width: 100%;
@@ -37,6 +38,7 @@
     &.active{
       width: 100%;  
       position: relative;
+      z-index: 1;
       &::before{
         content: '';
         position: absolute;
@@ -56,7 +58,7 @@
         background: linear-gradient(90.57deg, #A25DF0 -502.15%, rgba(162, 93, 240, 0) 99.45%);
         left: 0;
         top: 0;
-        z-index: 0;
+        z-index: -1;
       }
     }
   }
