@@ -3,7 +3,7 @@ mixin link(page, link, text, img)
     if page == link
       a(href="#!").menu__link.active <img src="images/#{img}.svg" />#{text}
     else
-      a(href="/"+link+".html").menu__link <img src="images/#{img}.svg" />#{text} 
+      a(href=link+".html").menu__link <img src="images/#{img}.svg" />#{text} 
 
 
 mixin menu(page)
