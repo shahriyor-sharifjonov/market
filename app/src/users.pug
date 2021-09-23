@@ -18,10 +18,10 @@ html(lang="en")
         include components/menu.pug 
         +menu('users')
         include components/statistics.pug 
-        +statistics('index')
+        +statistics()
       main.main 
         p main
-      aside.right-sidebar
-        p right sidebar
+      include components/deal.pug 
+      +deal()
 
     script(src="scripts/index.js") 

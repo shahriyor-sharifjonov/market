@@ -1,0 +1,33 @@
+.deal{
+  background: linear-gradient(134.32deg, #2C3A52 9.96%, #222D41 103.15%);
+  border-radius: 18px;
+  max-width: 300px;
+  width: 100%;
+  padding: 22px 22px 40px 22px;
+  &__title{
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 120.5%;
+    color: #FFFFFF;   
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 0.75px solid #F2F2F240; 
+  }
+  &__item{
+    border-bottom: 0.75px solid #F2F2F240; 
+    padding-bottom: 12px;
+    &:not(:last-child){
+      margin-bottom: 12px;
+    }
+    &-p{
+      font-family: Inter;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 145%;
+      color: #92A8D0;
+    }
+  }
+}
