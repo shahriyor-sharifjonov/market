@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+  font-family: 'Manrope', sans-serif;
+  &:focus,&:active{
+    outline: none;
+  }
+}
+body{
+  background: #222D41;
+  color: #fff;
+}
+button{
+  font-family: inherit;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+input{
+  font-family: inherit;
+}
+a{
+  text-decoration: none;
+}

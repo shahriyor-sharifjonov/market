@@ -1,0 +1,17 @@
+mixin header()
+  header.header#header 
+    a(href="index.html#header").header__logo
+      img(src="images/logo.png", alt="logo").header__logo-img
+    form(action="").header__search
+      input(type="text").header__search-input 
+      button(type="submit").header__search-btn 
+        img(src="images/search.svg", alt="search").header__search-btn-img
+    .header__right 
+      button(type="button" notifications="21").header__bell
+        img(src="images/bell.svg", alt="bell").header__bell-img
+      .header__user 
+        .header__user-content 
+          p.header__user-name <span class="violet">@</span>AlexMan
+          p.header__user-balance <span class="green">10 256 ₽</span> / <span class="yellow">0.00082 btc</span>
+        button(type="button").header__user-btn
+          img(src="images/user.png", alt="user image").header__user-img
