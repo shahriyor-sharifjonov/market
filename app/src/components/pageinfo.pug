@@ -1,0 +1,15 @@
+mixin page-info(title, btn, drop)
+  .page-info 
+    .page-info__left
+      h1.page-info__title #{title}
+      if btn !== ''
+        button(type="button").btn.page-info__btn.ripple #{btn}
+    if drop === 'drop1'
+      .dropdown 
+        button(type="button" onclick="Opendrop(this)") Все объявления
+    if drop === 'drop2'
+      .dropdown 
+        button(type="button" onclick="Opendrop(this)") Все сделки
+    if drop === 'drop3'
+      .dropdown 
+        button(type="button" onclick="Opendrop(this)") Все пользователи

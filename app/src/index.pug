@@ -20,7 +20,8 @@ html(lang="en")
         include components/statistics.pug 
         +statistics()
       main.main 
-        p main
+        include components/pageinfo.pug 
+        +page-info('Маркет', 'Разместить обьявление', 'drop1')
       include components/deal.pug 
       +deal()
 

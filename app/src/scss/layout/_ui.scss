@@ -35,3 +35,48 @@ a{
   justify-content: space-between;
   align-items: flex-start;
 }
+.main{
+  flex: 1;
+  padding-left: 60px;
+  padding-right: 40px;
+}
+.btn{
+  background: linear-gradient(0deg, #A25DF0, #A25DF0), #A25DF0;
+  border-radius: 6.94737px;
+  padding: 10px 20px;
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16.2105px;
+  line-height: 22px;
+  text-align: center;
+  color: #FFFFFF;
+  border: none;
+  text-decoration: none;
+}
+.ripple{ 
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  span{
+    position: absolute;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: animate .5s linear 1;
+    z-index: -1;
+  }
+}
+@keyframes animate {
+  0%{
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  100%{
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}

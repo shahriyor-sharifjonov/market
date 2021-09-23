@@ -20,7 +20,8 @@ html(lang="en")
         include components/statistics.pug 
         +statistics()
       main.main 
-        p main
+        include components/pageinfo.pug 
+        +page-info('Пользователи', '', 'drop3')
       include components/deal.pug 
       +deal()
 
