@@ -6,10 +6,34 @@ mixin page-info(title, btn, drop)
         button(type="button").btn.page-info__btn.ripple #{btn}
     if drop === 'drop1'
       .dropdown 
-        button(type="button" onclick="Opendrop(this)") Все объявления
+        button(type="button" onclick="openDrop(this)").dropdown__button 
+          span Категория
+          | Все объявления
+          img(src="images/arrow.svg", alt="arrow").dropdown__button-arrow
+        ul.dropdown__list 
+          li.dropdown__li 
+            a(href="#!").dropdown__link Все объявления
+          li.dropdown__li 
+            a(href="#!").dropdown__link Все объявления
     if drop === 'drop2'
       .dropdown 
-        button(type="button" onclick="Opendrop(this)") Все сделки
+        button(type="button" onclick="openDrop(this)").dropdown__button 
+          span Категория
+          | Все сделки  
+          img(src="images/arrow.svg", alt="arrow").dropdown__button-arrow
+        ul.dropdown__list 
+          li.dropdown__li 
+            a(href="#!").dropdown__link Все сделки
+          li.dropdown__li 
+            a(href="#!").dropdown__link Все сделки
     if drop === 'drop3'
       .dropdown 
-        button(type="button" onclick="Opendrop(this)") Все пользователи
+        button(type="button" onclick="openDrop(this)").dropdown__button 
+          span Категория
+          | Все пользователи
+          img(src="images/arrow.svg", alt="arrow").dropdown__button-arrow
+        ul.dropdown__list 
+          li.dropdown__li 
+            a(href="#!").dropdown__link Все пользователи
+          li.dropdown__li 
+            a(href="#!").dropdown__link Все пользователи
