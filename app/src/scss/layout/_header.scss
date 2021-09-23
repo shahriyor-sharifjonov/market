@@ -1,15 +1,33 @@
 .header{
   background: #2c3a52;
-  padding: 6px 30px 6px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  &__logo{
+    margin-right: 20px;
+  }
+  &__nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 30px 6px 60px;
+    max-width: 1800px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
   &__search{
     display: flex;
     justify-content: flex-start;
     align-items: center;
     max-width: 540px;
     width: 100%;
+    position: absolute;
+    left: 375px;
+    @include media(1400){
+      position: static;
+    }
     &-input{
       background: #222D41;
       border-radius: 7px;
@@ -67,6 +85,9 @@
     align-items: center;
     justify-content: flex-end;
     margin-left: 100px;
+    @include media(1300){
+      margin-left: 25px;
+    }
     &-content{
       display: flex;
       flex-direction: column;

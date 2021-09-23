@@ -1,0 +1,13 @@
+mixin link(page, link, text, img)
+  li 
+    if page == link
+      a(href="#!").menu__link.active <img src="images/#{img}.svg" />#{text}
+    else
+      a(href="/"+link+".html").menu__link <img src="/images/#{img}.svg" />#{text} 
+
+
+mixin menu(page)
+  nav.menu
+    ul.menu__list 
+      each item in [{link: 'index', text:'Маркет', img: 'cart'},{link: 'deals', text:'Сделки', img: 'deals'},{link: 'profile', text:'Профиль', img: 'useri'},{link: 'users', text:'Пользователи', img: 'users'},{link: 'faq', text:'FAQ', img: 'question'},{link: 'charity', text:'Благотворительность', img: 'sun'}]
+        +link(page, item.link, item.text, item.img) 
