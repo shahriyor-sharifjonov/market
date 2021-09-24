@@ -12,18 +12,19 @@ html(lang="en")
     link(rel="stylesheet", href="styles/index.css")
   body 
     include components/header.pug 
+    include components/pageinfo.pug 
+    include components/statistics.pug 
+    include components/deal.pug 
+    include components/menu.pug 
+    include components/premium-block.pug 
     +header
     .wrapper
       aside.left-sideber 
-        include components/menu.pug 
         +menu('index')
-        include components/statistics.pug 
         +statistics()
       main.main 
-        include components/pageinfo.pug 
         +page-info('Маркет', 'Разместить обьявление', 'drop1')
-        
-      include components/deal.pug 
+        +premium-blocks(3) 
       +deal()
 
     script(src="scripts/index.js") 

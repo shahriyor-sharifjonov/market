@@ -1,0 +1,12 @@
+mixin stars(num)
+  .stars 
+    img(src="images/stars.svg", alt="stars").stars__img
+    p.stars__num #{num}
+
+
+mixin item-info(img, username, status, online)
+  .item-info 
+    <img src="images/#{img}.png" class="item-info__img"/>
+    .item-info__content
+      p.item-info__name #{username}
+      +stars(4.40)

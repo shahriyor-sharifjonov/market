@@ -12,6 +12,7 @@ html(lang="en")
     link(rel="stylesheet", href="styles/index.css")
   body 
     include components/header.pug 
+    include components/premium-block.pug 
     +header
     .wrapper
       aside.left-sideber 
@@ -22,6 +23,7 @@ html(lang="en")
       main.main 
         include components/pageinfo.pug 
         +page-info('Благотворительность', 'Изменить', '')
+        +premium-blocks(3) 
       include components/deal.pug 
       +deal()
 
