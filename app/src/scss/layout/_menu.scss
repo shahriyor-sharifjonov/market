@@ -18,6 +18,11 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    &:last-of-type a.active{
+      &::before{
+        background: linear-gradient(171.01deg, #35FA31 0%, #FFFFFF 86.34%), #A25DF0;
+      }
+    }
   }
   &__link{
     padding: 10px 25px;
