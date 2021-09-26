@@ -2,6 +2,8 @@ include item-info.pug
 mixin announcement(bg, verified, active)
   if active === 'active'
     <div class="announcement active" style="background: linear-gradient(0.69deg, #2C3A52 40.79%, rgba(44, 58, 82, 0) 98.48%), url('../images/#{bg}.png'), #2C3A52">
+      button(type="button").announcement__set
+        img(src="images/settings.svg", alt="settings").announcement__set-img
       .announcement-top
         if verified === 'no'
           +item-info('avatar', '@MegaDupka', 'yes', 'yes', 'no')
@@ -20,6 +22,8 @@ mixin announcement(bg, verified, active)
     </div>
   else
     <div class="announcement" style="background: linear-gradient(0.69deg, #2C3A52 40.79%, rgba(44, 58, 82, 0) 98.48%), url('../images/#{bg}.png'), #2C3A52">
+      button(type="button").announcement__set
+        img(src="images/settings.svg", alt="settings").announcement__set-img
       .announcement-top
         if verified === 'no'
           +item-info('avatar', '@MegaDupka', 'yes', 'yes', 'no')
