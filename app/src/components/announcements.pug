@@ -1,28 +1,47 @@
 include item-info.pug
-mixin announcement(bg, verified)
-  <div class="announcement" style="background: linear-gradient(0.69deg, #2C3A52 40.79%, rgba(44, 58, 82, 0) 98.48%), url('../images/#{bg}.png'), #2C3A52">
-    .announcement-top
-      if verified === 'no'
-        +item-info('avatar', '@MegaDupka', 'yes', 'yes', 'no')
-      else 
-        +item-info('avatar', '@MegaDupka', 'no', 'no', 'yes')
-      .premium-info 
-        .premium-info__row 
-          img(src="images/money.svg", alt="money").premium-info__img
-          p.premium-info__p 5000₽
-        .premium-info__row 
-          img(src="images/discussion.svg", alt="money").premium-info__img
-          p.premium-info__p 450
-    .announcement-content
-      p.announcement__title Рефаунд отелей на сайтах еды Delivery Club
-      p.announcement__p Рефаунд еды с деливири клаб и яндекс еды в кратчайшие сроки. Работаем строго. Рефаунд еды с деливири клаб и яндекс еды в кратчайшие сроки. Работаем строго. Рефаунд еды с деливири клаб и яндекс еды в кратчайшие сроки. Работаем строго....
-  </div>
+mixin announcement(bg, verified, active)
+  if active === 'active'
+    <div class="announcement active" style="background: linear-gradient(0.69deg, #2C3A52 40.79%, rgba(44, 58, 82, 0) 98.48%), url('../images/#{bg}.png'), #2C3A52">
+      .announcement-top
+        if verified === 'no'
+          +item-info('avatar', '@MegaDupka', 'yes', 'yes', 'no')
+        else 
+          +item-info('avatar', '@MegaDupka', 'no', 'no', 'yes')
+        .premium-info 
+          .premium-info__row 
+            img(src="images/money.svg", alt="money").premium-info__img
+            p.premium-info__p 5000₽
+          .premium-info__row 
+            img(src="images/discussion.svg", alt="money").premium-info__img
+            p.premium-info__p 450
+      .announcement-content
+        p.announcement__title Рефаунд отелей на сайтах еды Delivery Club
+        p.announcement__p Рефаунд еды с деливири клаб и яндекс еды в кратчайшие сроки. Работаем строго. Рефаунд еды с деливири клаб и яндекс еды в кратчайшие сроки. Работаем строго. Рефаунд еды с деливири клаб и яндекс еды в кратчайшие сроки. Работаем строго....
+    </div>
+  else
+    <div class="announcement" style="background: linear-gradient(0.69deg, #2C3A52 40.79%, rgba(44, 58, 82, 0) 98.48%), url('../images/#{bg}.png'), #2C3A52">
+      .announcement-top
+        if verified === 'no'
+          +item-info('avatar', '@MegaDupka', 'yes', 'yes', 'no')
+        else 
+          +item-info('avatar', '@MegaDupka', 'no', 'no', 'yes')
+        .premium-info 
+          .premium-info__row 
+            img(src="images/money.svg", alt="money").premium-info__img
+            p.premium-info__p 5000₽
+          .premium-info__row 
+            img(src="images/discussion.svg", alt="money").premium-info__img
+            p.premium-info__p 450
+      .announcement-content
+        p.announcement__title Рефаунд отелей на сайтах еды Delivery Club
+        p.announcement__p Рефаунд еды с деливири клаб и яндекс еды в кратчайшие сроки. Работаем строго. Рефаунд еды с деливири клаб и яндекс еды в кратчайшие сроки. Работаем строго. Рефаунд еды с деливири клаб и яндекс еды в кратчайшие сроки. Работаем строго....
+    </div>
 
 
 mixin announcements()
   .announcements 
-    +announcement('item-bg-2', 'yes')
-    +announcement('item-bg-2', 'no')
+    +announcement('item-bg-2', 'yes', 'noactive')
+    +announcement('item-bg-2', 'no', 'noactive')
   .announcements 
-    +announcement('item-bg-3', 'no')
-    +announcement('', 'no')
+    +announcement('item-bg-3', 'no', 'noactive')
+    +announcement('', 'no', 'active')

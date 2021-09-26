@@ -11,6 +11,9 @@
   border-radius: 18px;
   max-width: 560px;
   width: 100%;
+  &.active{
+    border: 3px solid #FFD600
+  }
   &:first-of-type{
     margin-right: 40px;
   }
