@@ -17,6 +17,7 @@ html(lang="en")
     include components/deal.pug 
     include components/menu.pug 
     include components/premium-block.pug 
+    include components/announcements.pug 
     +header
     .wrapper
       aside.left-sideber 
@@ -25,6 +26,7 @@ html(lang="en")
       main.main 
         +page-info('Маркет', 'Разместить обьявление', 'drop1')
         +premium-blocks(3) 
+        +announcements()
       +deal()
 
     script(src="scripts/jquery.js") 
