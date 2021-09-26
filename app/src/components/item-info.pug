@@ -11,8 +11,13 @@ mixin item-info(img, username, status, online, verified)
       if status === 'yes' && online === 'no'
         .status.offline
           img(src="images/status-active.svg", alt="active status").status-active
+      if status === 'yes' && online === 'yes'
+        .status.online_status   
+          img(src="images/status-active.svg", alt="active status").status-active
       if status === 'no' && online === 'yes'
         .status.online_unstatus 
+      if status === 'no' && online === 'no'
+        .status.offline_unstatus 
     .item-info__content
       .item-info__row
         p.item-info__name #{username}

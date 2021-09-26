@@ -107,8 +107,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  &.online_status{
+    border: 2px solid #42FF00;
+    border-radius: 50%;
+  }
   &.online_unstatus{
     background: #42FF00;
+    border: 2px solid #2C3A52;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;    
+    bottom: 2px;
+    right: -2px;
+  }
+  &.offline_unstatus{
+    background: #FF0000;
     border: 2px solid #2C3A52;
     border-radius: 50%;
     width: 14px;

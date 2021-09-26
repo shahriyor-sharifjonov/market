@@ -3,9 +3,9 @@ mixin announcement(bg, verified)
   .announcement
     .announcement-top
       if verified === 'no'
-        +item-info('avatar', '@MegaDupka', 'yes', 'no', 'no')
+        +item-info('avatar', '@MegaDupka', 'yes', 'yes', 'no')
       else 
-        +item-info('avatar', '@MegaDupka', 'no', 'yes', 'yes')
+        +item-info('avatar', '@MegaDupka', 'no', 'no', 'yes')
       .premium-info 
         .premium-info__row 
           img(src="images/money.svg", alt="money").premium-info__img
