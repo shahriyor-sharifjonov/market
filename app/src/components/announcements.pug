@@ -1,8 +1,11 @@
 include item-info.pug
-mixin announcement(bg)
+mixin announcement(bg, verified)
   .announcement
     .announcement-top
-      +item-info('avatar', '@MegaDupka', 'yes', 'no', 'yes')
+      if verified === 'no'
+        +item-info('avatar', '@MegaDupka', 'yes', 'no', 'no')
+      else 
+        +item-info('avatar', '@MegaDupka', 'yes', 'yes', 'yes')
       .premium-info 
         .premium-info__row 
           img(src="images/money.svg", alt="money").premium-info__img
@@ -18,5 +21,5 @@ mixin announcement(bg)
 
 mixin announcements()
   .announcements 
-    +announcement('item-bg-2')
-    +announcement('item-bg-2')
+    +announcement('item-bg-2', 'yes')
+    +announcement('item-bg-2', 'no')
