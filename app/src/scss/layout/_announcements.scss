@@ -37,6 +37,16 @@
       max-width: 100%;
     }
   }
+  &__heart{
+    position: absolute;
+    bottom: 34px;
+    right: 31px;
+    width: 25px;
+    height: 21px;
+    img{
+      max-width: 100%;
+    }
+  }
   &__title{
     font-weight: bold;
     font-size: 18px;
