@@ -6,7 +6,13 @@ mixin stars(num)
 
 mixin item-info(img, username, status, online, verified)
   .item-info 
-    <img src="images/#{img}.png" class="item-info__img"/>
+    .item-info__avatar
+      <img src="images/#{img}.png" class="item-info__img" />
+      if status === 'yes' && online === 'no'
+        .status.offline
+          img(src="images/status-active.svg", alt="active status").status-active
+      if status === 'no' && online === 'yes'
+        .status.online_unstatus 
     .item-info__content
       .item-info__row
         p.item-info__name #{username}
