@@ -1,0 +1,22 @@
+.announcements{
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.announcement{
+  background: linear-gradient(0.69deg, #2C3A52 40.79%, rgba(44, 58, 82, 0) 98.48%), url(delivery.jpg), #2C3A52;
+  backdrop-filter: blur(33px);
+  border-radius: 18px;
+  max-width: 560px;
+  width: 100%;
+  &:first-of-type{
+    margin-right: 40px;
+  }
+  &-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+}
