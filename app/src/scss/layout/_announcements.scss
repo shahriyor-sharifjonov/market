@@ -54,4 +54,29 @@
     color: #92A8D0;
     margin-bottom: 28px;
   }
+  &-price{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 0 26px 26px;
+    &__item{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      &:not(:last-child){
+        margin-right: 25px;
+      }
+    }
+    &__img{
+      margin-right: 11px;
+    }
+    &__p{
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 22px;
+      color: #83FF6F;
+    }
+  }
 }

@@ -1,5 +1,5 @@
 include item-info.pug
-mixin announcement(bg, verified, active)
+mixin announcement(bg, verified, active, price)
   if active === 'active'
     <div class="announcement active" style="background: linear-gradient(0.69deg, #2C3A52 40.79%, rgba(44, 58, 82, 0) 98.48%), url('../images/#{bg}.png'), #2C3A52">
       button(type="button").announcement__set
@@ -19,6 +19,19 @@ mixin announcement(bg, verified, active)
       .announcement-content
         p.announcement__title Рефаунд отелей на сайтах еды Delivery Club
         p.announcement__p Рефаунд еды с деливири клаб и яндекс еды в кратчайшие сроки. Работаем строго. Рефаунд еды с деливири клаб и яндекс еды в кратчайшие сроки. Работаем строго. Рефаунд еды с деливири клаб и яндекс еды в кратчайшие сроки. Работаем строго....
+      if price === 'yes'
+        .announcement-price
+          .announcement-price__item
+            img(src="images/rouble.svg", alt="rouble").announcement-price__img
+            p.announcement-price__p 2 000 ₽  
+          .announcement-price__item
+            img(src="images/bitcoin.svg", alt="bitcoin").announcement-price__img
+            p.announcement-price__p 0.00412 BTC
+      else  
+        .announcement-price
+          .announcement-price__item
+            img(src="images/rouble.svg", alt="rouble").announcement-price__img
+            p.announcement-price__p Стоимость не установлена
     </div>
   else
     <div class="announcement" style="background: linear-gradient(0.69deg, #2C3A52 40.79%, rgba(44, 58, 82, 0) 98.48%), url('../images/#{bg}.png'), #2C3A52">
@@ -39,16 +52,29 @@ mixin announcement(bg, verified, active)
       .announcement-content
         p.announcement__title Рефаунд отелей на сайтах еды Delivery Club
         p.announcement__p Рефаунд еды с деливири клаб и яндекс еды в кратчайшие сроки. Работаем строго. Рефаунд еды с деливири клаб и яндекс еды в кратчайшие сроки. Работаем строго. Рефаунд еды с деливири клаб и яндекс еды в кратчайшие сроки. Работаем строго....
+      if price === 'yes'
+        .announcement-price
+          .announcement-price__item
+            img(src="images/rouble.svg", alt="rouble").announcement-price__img
+            p.announcement-price__p 2 000 ₽  
+          .announcement-price__item
+            img(src="images/bitcoin.svg", alt="bitcoin").announcement-price__img
+            p.announcement-price__p 0.00412 BTC
+      else  
+        .announcement-price
+          .announcement-price__item
+            img(src="images/rouble.svg", alt="rouble").announcement-price__img
+            p.announcement-price__p Стоимость не установлена
     </div>
 
 
 mixin announcements()
   .announcements 
-    +announcement('item-bg-2', 'yes', 'noactive')
-    +announcement('item-bg-2', 'no', 'noactive')
+    +announcement('item-bg-2', 'yes', 'noactive', 'yes')
+    +announcement('item-bg-2', 'no', 'noactive', 'yes')
   .announcements 
-    +announcement('item-bg-3', 'no', 'noactive')
-    +announcement('', 'no', 'active')
+    +announcement('item-bg-3', 'no', 'noactive', 'no')
+    +announcement('', 'no', 'active', 'yes')
   .announcements 
-    +announcement('', 'no', 'noactive')
-    +announcement('item-bg-1', 'no', 'noactive')
+    +announcement('', 'no', 'noactive', 'yes')
+    +announcement('item-bg-1', 'no', 'noactive', 'yes')
