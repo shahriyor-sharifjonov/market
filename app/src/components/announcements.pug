@@ -1,6 +1,6 @@
 include item-info.pug
 mixin announcement(bg, verified)
-  .announcement
+  <div class="announcement" style="background: linear-gradient(0.69deg, #2C3A52 40.79%, rgba(44, 58, 82, 0) 98.48%), url('../images/#{bg}.png'), #2C3A52">
     .announcement-top
       if verified === 'no'
         +item-info('avatar', '@MegaDupka', 'yes', 'yes', 'no')
@@ -16,10 +16,13 @@ mixin announcement(bg, verified)
     .announcement-content
       p.announcement__title Рефаунд отелей на сайтах еды Delivery Club
       p.announcement__p Рефаунд еды с деливири клаб и яндекс еды в кратчайшие сроки. Работаем строго. Рефаунд еды с деливири клаб и яндекс еды в кратчайшие сроки. Работаем строго. Рефаунд еды с деливири клаб и яндекс еды в кратчайшие сроки. Работаем строго....
-
+  </div>
 
 
 mixin announcements()
   .announcements 
     +announcement('item-bg-2', 'yes')
     +announcement('item-bg-2', 'no')
+  .announcements 
+    +announcement('item-bg-3', 'no')
+    +announcement('', 'no')
