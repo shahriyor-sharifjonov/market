@@ -1,0 +1,116 @@
+.exchange{
+  max-width: 365px;
+  background: linear-gradient(0.69deg, #2C3A52 40.79%, rgba(44, 58, 82, 0) 98.48%), #2C3A52;
+  border-radius: 15px;
+  &:not(:last-child){
+    margin-right: 40px;
+  }
+  &-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+  }
+  &-content{
+    padding: 2px 20px 6px 20px;
+  }
+  &__title{
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 120%;
+    color: #FFFFFF;
+    margin-bottom: 4px;
+  }
+  &__p{
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 120%;
+    color: #C2D5F9;
+  }
+  &-event{
+    padding: 0 10px 18px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  &__btn{
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 9px;
+    line-height: 12px;
+    text-align: center;
+    color: #2C3A52;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    width: 92px;
+    height: 22px;
+    &:not(:last-child){
+      margin-right: 10px;
+    }
+    &.green{
+      background: #83FF6F;
+    }
+    &.red{
+      background: #FF6464;
+    }
+  }
+  &-success{
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    color: #83FF6F;
+    margin-left: 4px;
+  }
+  &-cancel{
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    color: #FF6464;
+    margin-left: 4px;
+  }
+  .item-info__avatar{
+    width: 39px;
+    height: 39px;
+    img{
+      width: 39px;
+      height: 39px;
+    }
+  }
+  .item-info__name{
+    margin-bottom: 0;
+  }
+  .announcement-price__item{
+    margin-right: 6px;
+  }
+  .announcement-price{
+    padding: 0 0 11px 20px;
+  }
+  .announcement-price__img{
+    width: 19px;
+    height: 19px;
+    margin-right: 5px;
+  }
+  .announcement-price__p{
+    font-size: 12px;
+    line-height: 120%;
+  }
+}
+
+
+.exchanges{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}

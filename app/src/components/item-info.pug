@@ -4,7 +4,7 @@ mixin stars(num)
     p.stars__num #{num}
 
 
-mixin item-info(img, username, status, online, verified)
+mixin item-info(img, username, status, online, verified, color="green")
   .item-info 
     .item-info__avatar
       <img src="images/#{img}.png" class="item-info__img" />
@@ -20,7 +20,10 @@ mixin item-info(img, username, status, online, verified)
         .status.offline_unstatus 
     .item-info__content
       .item-info__row
-        p.item-info__name #{username}
+        if color === 'green'
+          p.item-info__name #{username}
+        else  
+          p.item-info__name.white #{username}
         if verified === 'yes'
           img(src="images/verified.svg", alt="verified")
       +stars(4.40)
