@@ -1,4 +1,7 @@
 .profile{
+  background: linear-gradient(134.32deg, #2C3A52 9.96%, #222D41 103.15%);
+  border-radius: 18px;
+  margin-bottom: 50px;
   &__banner{
     backdrop-filter: blur(13px);
     border-radius: 19px;
@@ -7,6 +10,7 @@
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
+      margin-bottom: 30px;
     }
     &-image{
       width: 146px;
@@ -51,6 +55,7 @@
       line-height: 25px;
       text-align: right;
       color: #869cc2;
+      margin-bottom: 15px;
       .green{
         color: #83ff6e;
         margin-right: 3px;
@@ -68,6 +73,155 @@
           margin-right: 6px;
         }
       }
+    }
+    &-stars{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 11px;
+      &-img{
+        height: 20px;
+        margin-right: 8px;
+      }
+      &-p{
+        font-family: Manrope;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 19.0588px;
+        line-height: 143.6%;
+        color: #FFD600;
+      }
+    }
+    &-row{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    &-col{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      &:not(:last-child){
+        margin-right: 20px;
+      }
+      &-img{
+        height: 18px;
+        margin-right: 6px;
+      }
+      &-p{
+        font-family: Manrope;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15.4852px;
+        line-height: 143.6%;
+        color: #FFFFFF;
+      }
+    }
+    &-btns{
+      display: flex;
+      align-items: stretch;
+      justify-content: flex-start;
+    }
+    &-btn{
+      width: 200px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 19px;
+      text-align: center;
+      color: #FFFFFF;    
+      background: #3B4C6A;
+      border-radius: 6px;
+      z-index: 1;
+      &:not(:last-child){
+        margin-right: 13px;
+      } 
+      &.violet{
+        background: #A25DF0;
+      } 
+    }
+  }
+  &__content{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px 60px 70px 60px;
+  }
+  &__review{
+    width: calc(50% - 30px);
+    border-radius: 20px;
+    padding: 20px 20px 40px 20px;
+    margin-bottom: 40px;
+    &.success{
+      background: linear-gradient(31.46deg, #83FF6F -84.93%, rgba(40, 52, 74, 0) 83.54%), #354460;
+    }
+    &.fail{
+      background: linear-gradient(31.46deg, #FF6464 -84.93%, rgba(40, 52, 74, 0) 83.54%), #354460;
+    }
+    &-top{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    &-content{
+      margin-left: 16px;
+      width: 100%;
+    }
+    &-title{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 143.6%;
+      color: #FFFFFF;
+      margin-bottom: 15px;
+      img{
+        height: 23px;
+      }
+    }
+    &-row{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    &-item{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      &:first-of-type{
+        margin-right: 14px;
+      }
+      img{
+        height: 15px;
+        margin-right: 5px;
+      }
+      p{
+        font-family: Manrope;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 143.6%;
+        color: #FFFFFF;
+      }
+    }
+    &-p{
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 180%;
+      color: #FFFFFF;
+      margin-top: 15px;
     }
   }
 }
