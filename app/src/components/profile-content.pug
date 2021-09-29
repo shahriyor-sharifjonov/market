@@ -1,0 +1,31 @@
+mixin profile-content()
+  .profile 
+    .profile__banner(style="background: url('images/profile-banner.png') center / cover no-repeat")
+      .profile__banner-top
+        .profile__banner-image 
+          img(src="images/profile-img.png", alt="").profile__banner-img
+        .profile__banner-content
+          h2.profile__banner-title AlexMan
+            img(src="images/verified.svg", alt="")
+          .profile__banner-balance <span class="green">10 256 ₽</span> / <span class="yellow">0.00082 btc</span> 
+            button(type="button").profile__banner-balance-btn 
+              img(src="images/add.svg", alt="")  
+            button(type="button").profile__banner-balance-btn 
+              img(src="images/document-btn.svg", alt="")  
+          .profile__banner-stars 
+            img(src="images/stars.svg", alt="").profile__banner-stars-img
+            p.profile__banner-stars-p 4,27
+          .profile__banner-row 
+            .profile__banner-col
+              img(src="images/money.svg", alt="").profile__banner-col-img
+              p.profile__banner-col-p Депозит: <span>5000₽</span>
+            .profile__banner-col
+              img(src="images/discussion.svg", alt="").profile__banner-col-img
+              p.profile__banner-col-p Сделки: <span>450</span>
+            .profile__banner-col
+              img(src="images/edit-btn.svg", alt="").profile__banner-col-img
+              p.profile__banner-col-p Объявления: <span>450</span>
+            .profile__banner-col
+              img(src="images/arbitaj.svg", alt="").profile__banner-col-img
+              p.profile__banner-col-p Арбитражи: <span>2</span>
+            

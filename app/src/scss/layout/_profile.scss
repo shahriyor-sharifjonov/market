@@ -1,0 +1,73 @@
+.profile{
+  &__banner{
+    backdrop-filter: blur(13px);
+    border-radius: 19px;
+    padding: 100px 60px 30px 60px;
+    &-top{
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+    &-image{
+      width: 146px;
+      height: 146px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    &-img{
+      max-width: 100%;
+      object-fit: cover;
+    }
+    &-content{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-left: 20px;
+    }
+    &-title{
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 120%;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 10px;
+      img{
+        margin-left: 5px;
+      }
+    }
+    &-balance{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 25px;
+      text-align: right;
+      color: #869cc2;
+      .green{
+        color: #83ff6e;
+        margin-right: 3px;
+      }
+      .yellow{
+        color: #ffd600;
+        margin-left: 3px;
+        margin-right: 8px;
+      }
+      &-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:first-of-type{
+          margin-right: 6px;
+        }
+      }
+    }
+  }
+}
