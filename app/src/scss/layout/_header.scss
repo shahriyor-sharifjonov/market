@@ -19,7 +19,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 6px 30px 6px 60px;
+    padding: 6px 20px 6px 20px;
     max-width: 1800px;
     width: 100%;
     margin-left: auto;
@@ -33,7 +33,7 @@
     max-width: 540px;
     width: 100%;
     position: absolute;
-    left: 370px;
+    left: 305px;
     @include media(992){
       display: none;
     }

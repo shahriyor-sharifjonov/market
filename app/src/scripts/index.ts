@@ -80,9 +80,11 @@ $('.premium-blocks').slick({
   infinite: false,
   slidesToShow: 3,
   slidesToScroll: 1,
-  dots: true,
   arrows: false,
-  centerPadding: '15px',
+  dots: true,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  centerPadding: '50px',
   responsive: [
     {
       breakpoint: 1600,
@@ -104,6 +106,14 @@ $('.premium-blocks').slick({
       breakpoint: 1200,
       settings: {
         slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: false,
+      }
+    },
+    {
+      breakpoint: 667,
+      settings: {
+        slidesToShow: 1,
         slidesToScroll: 1,
         infinite: false,
       }
