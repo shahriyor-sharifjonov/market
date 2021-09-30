@@ -3,8 +3,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  &__button{
+    display: none;
+    @include media(992){
+      display: flex;
+    }
+  }
   &__logo{
     margin-right: 20px;
+    @include media(992){
+      display: none;
+    }
   }
   &__nav{
     display: flex;
@@ -25,6 +34,9 @@
     width: 100%;
     position: absolute;
     left: 370px;
+    @include media(992){
+      display: none;
+    }
     @include media(1400){
       position: static;
     }
@@ -36,6 +48,9 @@
       height: 35px;
       color: #fff;
       width: 100%;
+      &::placeholder{
+        color: #455B81;
+      }
     }
     &-btn{
       background: none;

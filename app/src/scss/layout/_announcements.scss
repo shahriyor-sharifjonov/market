@@ -6,7 +6,7 @@
 }
 
 .announcement{
-  background: linear-gradient(0.69deg, #2C3A52 40.79%, rgba(44, 58, 82, 0) 98.48%), url(delivery.jpg), #2C3A52;
+  background: linear-gradient(0.69deg, #2C3A52 40.79%, rgba(44, 58, 82, 0) 98.48%), #2C3A52;
   backdrop-filter: blur(33px);
   border-radius: 18px;
   position: relative;
@@ -39,8 +39,8 @@
   }
   &__heart{
     position: absolute;
-    bottom: 34px;
-    right: 31px;
+    bottom: 30px;
+    right: 30px;
     width: 25px;
     height: 21px;
     img{

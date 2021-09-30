@@ -17,7 +17,9 @@ html(lang="en")
     include components/statistics.pug 
     include components/pageinfo.pug 
     include components/profile-content.pug 
+    include components/mob-menu.pug 
     +header
+    +mob-menu
     .wrapper
       aside.left-sideber 
         +menu('profile')
@@ -27,4 +29,6 @@ html(lang="en")
         +profile-content()
       +deal()
 
-    script(src="scripts/index.js") 
+    script(src="scripts/jquery.js") 
+    script(src="scripts/slick.min.js") 
+    script(src="scripts/index.js")  

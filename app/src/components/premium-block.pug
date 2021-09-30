@@ -1,23 +1,26 @@
 include item-info.pug
 
 mixin premium-block()
-  .premium(style="background: linear-gradient(0.69deg, #2C3A52 40.79%, rgba(44, 58, 82, 0) 98.48%), url('images/item-bg-1.png'), #2C3A52;")
-    .premium-top
-      +item-info("avatar", '@MegaDupka', 'yes', 'yes', 'no')
-      .premium-info 
-        .premium-info__row 
-          img(src="images/money.svg", alt="money").premium-info__img
-          p.premium-info__p 5000₽
-        .premium-info__row 
-          img(src="images/discussion.svg", alt="money").premium-info__img
-          p.premium-info__p 450
-    .premium-content
-      p.premium-content__p Я занимаюсь профессиональной разработкой веб сайтов, приложений и прочее. Данный блок - блок рекламных объявлений.
+  .premium-slide
+    .premium(style="background: linear-gradient(0.69deg, #2C3A52 40.79%, rgba(44, 58, 82, 0) 98.48%), url('images/item-bg-1.png') center / cover no-repeat, #2C3A52;")
+      .premium-top
+        +item-info("avatar", '@MegaDupka', 'yes', 'yes', 'no')
+        .premium-info 
+          .premium-info__row 
+            img(src="images/money.svg", alt="money").premium-info__img
+            p.premium-info__p 5000₽
+          .premium-info__row 
+            img(src="images/discussion.svg", alt="money").premium-info__img
+            p.premium-info__p 450
+      .premium-content
+        p.premium-content__p Я занимаюсь профессиональной разработкой веб сайтов, приложений и прочее. Данный блок - блок рекламных объявлений.
 
 
 
 mixin premium-blocks()
   .premium-blocks
+    +premium-block
+    +premium-block
     +premium-block
     +premium-block
     +premium-block

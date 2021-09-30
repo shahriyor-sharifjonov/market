@@ -1,3 +1,27 @@
+// Header Menu
+if(document.querySelector('.header__button')){
+  const headerButton: HTMLButtonElement =
+  document.querySelector(".header__button");
+  const headerMenu: HTMLUListElement = document.querySelector(".mob-menu");
+  let menuOpened = false;
+  const menuToggle = () => {
+    menuOpened = !menuOpened;
+    headerButton.classList.toggle("open");
+    headerMenu.classList.toggle("open");
+  };
+
+  headerButton.onclick = menuToggle;
+
+  window.onclick = (e: MouseEvent) => {
+    if (
+      menuOpened &&
+      !e.composedPath().includes(headerButton) &&
+      !e.composedPath().includes(headerMenu)
+    )
+      menuToggle();
+  };
+}
+
 const ripple = document.querySelectorAll('.ripple')
 ripple.forEach(btn => {
   btn.addEventListener('click', function(e){
@@ -29,6 +53,63 @@ window.addEventListener('click', (e) => {
     })
   }
 })
+
+let mobileMenu = document.querySelector('.mob-menu');
+let leftSidebar = document.querySelector('.left-sideber');
+let menu = document.querySelector('.menu');
+let stats = document.querySelector('.statistics');
+window.addEventListener('resize', function(e){
+  if(window.innerWidth <= 992){
+    mobileMenu.append(menu)     
+    console.log('olindi');
+     
+  }if(window.innerWidth > 992){
+    leftSidebar.insertBefore(menu, stats)
+    console.log("qo'shildi"); 
+  }
+})
+window.addEventListener('load', function(e){
+  if(window.innerWidth <= 992){
+    mobileMenu.append(menu) 
+    console.log('olindi');
+       
+  }      
+})
+
+$('.premium-blocks').slick({
+  infinite: false,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  dots: true,
+  arrows: false,
+  centerPadding: '15px',
+  responsive: [
+    {
+      breakpoint: 1600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: false,
+      }
+    },
+    {
+      breakpoint: 1400,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: false,
+      }
+    },
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: false,
+      }
+    },
+  ]
+});
 
 $(document).ready(function() {
   $(".faq__item > button").on("click", function() {

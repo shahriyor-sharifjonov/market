@@ -1,10 +1,11 @@
 .deal{
   background: linear-gradient(134.32deg, #2C3A52 9.96%, #222D41 103.15%);
   border-radius: 18px;
-  max-width: 300px;
-  width: 100%;
+  min-width: 300px;
   padding: 22px 22px 40px 22px;
-  
+  @include media(1400){
+    display: none;
+  }
   &__title{
     font-family: Manrope;
     font-style: normal;

@@ -1,12 +1,14 @@
 .premium{
   display: flex;
   flex-direction: column;
-  box-shadow: 0px 4px 33px rgba(255, 214, 0, 0.15);
-  animation: openShadow .9s ease 1;
+  // animation: openShadow .9s ease 1;
   border-radius: 18px;
   padding: 20px 20px 30px 20px;
-  &:not(:last-of-type){
-    margin-right: 40px;
+  box-shadow: none;
+  transition: box-shadow 0.4s ease-in-out;
+  &-slide{
+    border-radius: 18px;
+    padding: 0 15px;
   }
   &-top{
     display: flex;
@@ -14,10 +16,55 @@
     align-items: center;
   }
   &-blocks{
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    margin-bottom: 40px;
+    .slick{
+      &-list{
+        width: calc(100% + 30px);
+        padding: 0 15px;
+        margin-left: -15px;
+        overflow: hidden;
+        padding-bottom: 40px;
+        padding-top: 40px;
+      }
+      &-track{
+        justify-content: space-between;
+        width: 100%;
+      }
+      &-slide{
+        .premium-slide>.premium{
+          box-shadow: none;
+          transition: box-shadow 0.1s ease-in-out;
+        }
+      }
+      &-slide.slick-active{
+        &.premium-slide>.premium{
+          box-shadow: 0px 4px 15px rgba(255, 214, 0, 0.15);
+        }
+      }
+      &-dots{
+        margin-top: -30px;
+        margin-bottom: 20px;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        list-style-type: none;
+        li{
+          button{
+            font-size: 0;
+            width: 8px;
+            height: 8px;
+            background: #586066;
+            margin: 0 4px;
+            border-radius: 50%;
+          }
+        }
+        .slick-active{
+          button{
+            background: #a2a6a9;
+          }
+        }
+      }
+    }
   }
   &-info{
     &__row{
@@ -143,6 +190,6 @@
     box-shadow: 0px 0px 0px rgba(255, 214, 0, 0.15);
   }
   to{
-    box-shadow: 0px 4px 33px rgba(255, 214, 0, 0.15);
+    box-shadow: 0px 4px 15px rgba(255, 214, 0, 0.15);
   }
 }

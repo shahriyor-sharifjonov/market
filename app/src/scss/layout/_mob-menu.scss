@@ -1,0 +1,19 @@
+.mob-menu{
+  display: none;
+  position: fixed;
+  z-index: 24;
+  bottom: -100%;
+  transition: 800ms ease;
+  background: #394863;
+  border-radius: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  &.open{
+    bottom: 0;
+  }
+  @include media(992){
+    display: flex;
+  }
+}

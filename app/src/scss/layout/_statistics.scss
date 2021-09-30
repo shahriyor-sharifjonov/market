@@ -4,6 +4,9 @@
   max-width: 250px;
   width: 100%;
   padding: 26px 20px 37px 22px;
+  @include media(992){
+    display: none;
+  }
   &__title{
     font-family: Manrope;
     font-style: normal;

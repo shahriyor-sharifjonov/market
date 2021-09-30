@@ -13,15 +13,18 @@ html(lang="en")
   body 
     include components/header.pug 
     include components/premium-block.pug 
+    include components/menu.pug 
+    include components/statistics.pug 
+    include components/pageinfo.pug 
+    include components/deal.pug 
+    include components/mob-menu.pug 
     +header
+    +mob-menu
     .wrapper
       aside.left-sideber 
-        include components/menu.pug 
         +menu('charity')
-        include components/statistics.pug 
         +statistics()
       main.main 
-        include components/pageinfo.pug 
         +page-info('Благотворительность', 'Изменить', '')
         +premium-blocks(3) 
         .charity 
@@ -32,7 +35,6 @@ html(lang="en")
             .charity__btns 
               button(type="button").charity__btn.btn.ripple Пожертвовать
               button(type="button").charity__btn.btn.ripple Перейти на сайт сбора
-      include components/deal.pug 
       +deal()
 
     script(src="scripts/jquery.js") 

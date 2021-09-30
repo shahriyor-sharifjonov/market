@@ -56,15 +56,28 @@ a{
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding: 40px 30px 0 30px;
+  padding: 40px 15px 0 15px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
 .main{
-  flex: 1;
   padding-left: 40px;
   padding-right: 40px;
+  max-width: calc(100% - 550px);
+  @include media(1400){
+    max-width: calc(100% - 250px);
+    padding-right: 0;
+  }
+  @include media(992){
+    max-width: 100%;
+    padding-left: 0;
+  }
+}
+.left-sideber{
+  @include media(992){
+    display: none;
+  }
 }
 .btn{
   background: linear-gradient(0deg, #A25DF0, #A25DF0), #A25DF0;
@@ -144,6 +157,7 @@ a{
     list-style-type: none;
     width: 100%;
     padding: 15px 0px;
+    z-index: 25;
   }
   &__li{
     width: 100%;
@@ -162,6 +176,15 @@ a{
     &:hover{
       background: lighten(#2c3a52, 10%);
     }
+  }
+}
+
+.slick{
+  &-list{
+    overflow: hidden;
+  }
+  &-track{
+    display: flex;
   }
 }
 
