@@ -4,12 +4,20 @@
   align-items: center;
   width: 100%;
   height: 46px;
+  @include media(992){
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @include media(667){
+    padding-left: 0;
+    padding-right: 0;
+  }
   &__left{
     display: flex;
     align-items: center;
     justify-content: flex-start;
     @include media($sm){
-      width: 100%;
+      // width: 100%;
       justify-content: space-between;
     }
   }
@@ -23,6 +31,7 @@
     color: #FFFFFF;
     padding-bottom: 2px;
     @include media($sm){
+      display: none;
       font-size: 20px;
     }
   }

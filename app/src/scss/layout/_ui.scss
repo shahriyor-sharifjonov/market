@@ -118,11 +118,14 @@ a{
     font-size: 16px;
     line-height: 120.5%;
     color: #E8EFFF;
-    padding: 11px 18px;
+    padding: 10px 18px;
     border: 2.50909px solid #5C6F90;
     box-sizing: border-box;
     border-radius: 7.52727px;
     position: relative;
+    @include media($sm){
+      font-size: 14px;
+    }
     span{
       position: absolute;
       font-family: Inter;
@@ -143,6 +146,9 @@ a{
     }
     &-arrow{
       margin-left: 50px;
+      @include media($sm){
+        margin-left: 10px;
+      }
     }
   }
   &__list{
@@ -187,6 +193,8 @@ a{
     display: flex;
   }
 }
+
+
 
 @keyframes animate {
   0%{

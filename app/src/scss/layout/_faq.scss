@@ -1,19 +1,9 @@
 .faq{
-  // @include media($sm){
-  //   &.wrapper{
-  //     padding-top: 0;
-  //     .main{
-  //       display: flex;
-  //       flex-direction: column;
-  //       .premium-blocks{
-  //         order: -1;
-  //       }
-  //       .page-info{
-  //         margin-bottom: 30px;
-  //       }
-  //     }
-  //   }
-  // }
+  @include media($sm){
+    &.wrapper{
+      padding-top: 20px;
+    }
+  }
   &__item{
     width: 100%;
     margin-bottom: 25px;

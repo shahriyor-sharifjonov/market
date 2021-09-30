@@ -26,6 +26,9 @@
         @include media(667){
           padding: 40px 0;
         }
+        @include media($sm){
+          padding-top: 20px;
+        }
       }
       &-track{
         justify-content: space-between;
