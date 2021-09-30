@@ -3,15 +3,44 @@
   border-radius: 18px;
   margin-bottom: 50px;
   margin-top: 40px;
+  @include media($sm){
+    margin-left: -15px;
+    width: calc(100% + 30px);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  &-wrapper{
+    @include media($sm){
+      .page-info{
+        display: none;
+      }
+    }
+  }
   &__banner{
     backdrop-filter: blur(13px);
     border-radius: 19px;
-    padding: 100px 60px 30px 60px;
+    padding: 100px 30px 30px 60px;
+    @include media(1550){
+      padding: 50px 20px 30px 20px;
+    }
     &-top{
       display: flex;
       justify-content: flex-start;
-      align-items: flex-start;
+      align-items: center;
       margin-bottom: 30px;
+      position: relative;
+      @include media(1500){
+        margin-bottom: 60px;
+      }
+      @include media(1400){
+        margin-bottom: 30px;
+      }
+      @include media(1200){
+        margin-bottom: 60px;
+      }
+      @include media($md){
+        margin-bottom: 120px;
+      }
     }
     &-image{
       width: 146px;
@@ -97,13 +126,35 @@
       display: flex;
       align-items: center;
       justify-content: flex-start;
+      @include media(1500){
+        position: absolute;
+        left: 0;
+        bottom: -40px;
+      }
+      @include media(1400){
+        position: static;
+      }
+      @include media(1200){
+        position: absolute;
+      }
+      @include media($md){
+        flex-wrap: wrap;
+        bottom: -100px;
+      }
     }
     &-col{
       display: flex;
       justify-content: flex-start;
       align-items: center;
+      @include media($md){
+        width: 50%;
+      }
       &:not(:last-child){
         margin-right: 20px;
+        @include media($md){
+          margin-right: 0;
+          margin-bottom: 5px;
+        }
       }
       &-img{
         height: 18px;
@@ -122,6 +173,11 @@
       display: flex;
       align-items: stretch;
       justify-content: flex-start;
+      @include media($md){
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
     }
     &-btn{
       width: 200px;
@@ -141,7 +197,17 @@
       z-index: 1;
       &:not(:last-child){
         margin-right: 13px;
+        @include media($md){
+          margin-right: 0;
+          width: calc(50% - 10px);
+          margin-bottom: 10px;
+        }
       } 
+      &:last-child{
+        @include media($md){
+          width: 100%;
+        }
+      }
       &.violet{
         background: #A25DF0;
       } 
@@ -153,12 +219,33 @@
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 30px 60px 70px 60px;
+    @include media(1550){
+      padding: 30px 20px 20px 20px;
+    }
   }
   &__review{
     width: calc(50% - 30px);
     border-radius: 20px;
     padding: 20px 20px 40px 20px;
     margin-bottom: 40px;
+    @include media(1600){
+      width: calc(50% - 7.5px);
+      margin-bottom: 15px;
+    }
+    @include media($md){
+      width: 100%;
+    }
+    &:nth-last-child(-n+2) {
+      margin-bottom: 0;
+      @include media($md){
+        margin-bottom: 15px;
+      }
+    }
+    &:last-of-type{
+      @include media($md){
+        margin-bottom: 0;
+      }
+    }
     &.success{
       background: linear-gradient(31.46deg, #83FF6F -84.93%, rgba(40, 52, 74, 0) 83.54%), #354460;
     }
