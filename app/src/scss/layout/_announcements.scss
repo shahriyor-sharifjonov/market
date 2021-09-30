@@ -99,6 +99,14 @@
     text-align: justify;
     color: #92A8D0;
     margin-bottom: 28px;
+    @include media($md){
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      margin-bottom: 10px;
+    }
   }
   &-price{
     display: flex;
