@@ -1,15 +1,19 @@
 .exchange{
-  max-width: 333px;
+  width: calc(33.333% - 15px);
   background: linear-gradient(0.69deg, #2C3A52 40.79%, rgba(44, 58, 82, 0) 98.48%), #2C3A52;
   border-radius: 15px;
-  &:not(:last-child){
-    margin-right: 40px;
+  margin-bottom: 25px;
+  @include media(1750){
+    width: calc(50% - 12.5px);
   }
   &-top{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     padding: 18px 20px;
+    svg{
+      margin-right: 8px;
+    }
   }
   &-content{
     padding: 2px 20px 6px 20px;
@@ -112,5 +116,6 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
   margin-bottom: 40px;
 }
