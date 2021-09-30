@@ -60,19 +60,14 @@ let menu = document.querySelector('.menu');
 let stats = document.querySelector('.statistics');
 window.addEventListener('resize', function(e){
   if(window.innerWidth <= 992){
-    mobileMenu.append(menu)     
-    console.log('olindi');
-     
+    mobileMenu.append(menu)
   }if(window.innerWidth > 992){
     leftSidebar.insertBefore(menu, stats)
-    console.log("qo'shildi"); 
   }
 })
 window.addEventListener('load', function(e){
   if(window.innerWidth <= 992){
     mobileMenu.append(menu) 
-    console.log('olindi');
-       
   }      
 })
 

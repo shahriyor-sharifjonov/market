@@ -1,3 +1,7 @@
 mixin mob-menu()
   .mob-menu 
     h2.mob-menu__title Меню
+    form(action="").mob-menu__search
+      button(type="submit").mob-menu__search-button
+        img(src="images/search-2.svg", alt="")
+      input(type="text" placeholder="Search").mob-menu__search-input
