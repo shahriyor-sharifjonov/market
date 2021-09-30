@@ -19,12 +19,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 6px 20px 6px 20px;
+    padding: 6px 20px;
     max-width: 1800px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     position: relative;
+    @include media($sm){
+      padding: 6px 15px;
+    }
   }
   &__search{
     display: flex;
@@ -131,9 +134,18 @@
       color: #869cc2;
       & .green{
         color: #83FF6F;
+        @include media($sm){
+          display: none;
+        }
+      }
+      & .slash{
+        @include media($sm){
+          display: none;
+        }
       }
       & .yellow{
         color: #ffd600;
+        color: #fa46e3;
       }
     }
   }

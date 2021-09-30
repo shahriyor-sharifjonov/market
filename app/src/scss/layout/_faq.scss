@@ -1,4 +1,19 @@
 .faq{
+  // @include media($sm){
+  //   &.wrapper{
+  //     padding-top: 0;
+  //     .main{
+  //       display: flex;
+  //       flex-direction: column;
+  //       .premium-blocks{
+  //         order: -1;
+  //       }
+  //       .page-info{
+  //         margin-bottom: 30px;
+  //       }
+  //     }
+  //   }
+  // }
   &__item{
     width: 100%;
     margin-bottom: 25px;
@@ -10,12 +25,21 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      text-align: left; 
       font-weight: 600;
       font-size: 21px;
       line-height: 120.5%;
       color: #FFFFFF;
       padding: 0 35px; 
       transition-delay: 200ms;
+      @include media($sm){
+        font-size: 13px;
+        line-height: 120.5%;
+        padding: 0 15px;
+      }
+      &-arrow{
+        margin-left: 5px;
+      }
       &.active{
         border-radius: 30px 30px 0px 0px;
         transition-delay: 0ms;
@@ -32,6 +56,21 @@
       border-radius: 0px 0px 30px 30px;
       padding: 20px 35px;
       display: none;
+      @include media($sm){
+        padding: 12px 15px 30px 15px;
+      }
+    }
+    &-p{
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 21px;
+      line-height: 146%;
+      color: #E8EFFF;
+      @include media($sm){
+        font-size: 12px;
+        line-height: 146%;
+      }
     }
   }
 }

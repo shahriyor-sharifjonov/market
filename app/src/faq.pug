@@ -14,16 +14,17 @@ html(lang="en")
     include components/header.pug 
     include components/premium-block.pug 
     include components/mob-menu.pug 
+    include components/pageinfo.pug 
+    include components/statistics.pug 
+    include components/menu.pug 
+    include components/deal.pug 
     +header
     +mob-menu
-    .wrapper
+    .wrapper.faq
       aside.left-sideber 
-        include components/menu.pug 
         +menu('faq')
-        include components/statistics.pug 
         +statistics()
       main.main 
-        include components/pageinfo.pug 
         +page-info('FAQ', 'Добавить', '')
         +premium-blocks(3) 
         .faq 
@@ -54,7 +55,6 @@ html(lang="en")
               p.faq__item-p Чтобы сделать данный знак вам потребуется например сделать что-то типо вот этого вот дела я не знаюдаже что тут можно написать 123 lorem ipsum 11223  
 
 
-      include components/deal.pug 
       +deal()
 
     script(src="scripts/jquery.js") 
