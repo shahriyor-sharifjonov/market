@@ -60,6 +60,9 @@ a{
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  @include media($sm){
+    padding: 20px 15px 0 15px;
+  }
 }
 .main{
   padding-left: 40px;
