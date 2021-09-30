@@ -1,0 +1,58 @@
+include item-info.pug
+mixin user(status, chiziq)
+  .user
+    if chiziq === 'chizilmagan'
+      .user__top 
+        if status === 'online'
+          +item-info('avatar', 'MegaDupka', 'no', 'yes', 'no', 'white')
+        if status === 'offline'
+          +item-info('avatar', 'MegaDupka', 'no', 'no', 'no', 'white')
+        if status === 'online-verified'
+          +item-info('avatar', 'MegaDupka', 'no', 'yes', 'yes', 'white')
+        button(type="button").user__top-btn 
+          img(src="images/settings.svg", alt="")
+    else 
+      .user__top.red 
+        if status === 'online'
+          +item-info('avatar', 'MegaDupka', 'no', 'yes', 'no', 'white')
+        if status === 'offline'
+          +item-info('avatar', 'MegaDupka', 'no', 'no', 'no', 'white')
+        if status === 'online-verified'
+          +item-info('avatar', 'MegaDupka', 'no', 'yes', 'yes', 'white')
+        button(type="button").user__top-btn 
+          img(src="images/settings.svg", alt="")
+    .user__content 
+      .user__item 
+        img(src="images/edit-gray.svg", alt="").user__item-img
+        p.user__item-p Создано тем: 450
+      .user__item 
+        img(src="images/discussion-gray.svg", alt="").user__item-img
+        p.user__item-p Сделок: 450
+      .user__item 
+        img(src="images/money-gray.svg", alt="").user__item-img
+        p.user__item-p Депозит: 5000₽
+      .user__item 
+        img(src="images/arbitaj-gray.svg", alt="").user__item-img
+        p.user__item-p Арбитражей: 2
+
+mixin users()
+  .users
+    +user('online-verified', 'chizilmagan')
+    +user('offline', 'chizilgan')
+    +user('offline', 'chizilmagan')
+  .users
+    +user('online', 'chizilmagan')
+    +user('online', 'chizilmagan')
+    +user('online', 'chizilmagan')
+  .users
+    +user('online', 'chizilmagan')
+    +user('online', 'chizilmagan')
+    +user('online', 'chizilmagan')
+  .users
+    +user('online', 'chizilmagan')
+    +user('online', 'chizilmagan')
+    +user('online', 'chizilmagan')
+  .users
+    +user('online', 'chizilmagan')
+    +user('online', 'chizilmagan')
+    +user('online', 'chizilmagan')

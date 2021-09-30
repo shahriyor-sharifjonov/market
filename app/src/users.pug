@@ -13,18 +13,20 @@ html(lang="en")
   body 
     include components/header.pug 
     include components/premium-block.pug 
+    include components/users.pug 
+    include components/menu.pug
+    include components/statistics.pug 
+    include components/deal.pug 
+    include components/pageinfo.pug 
     +header
     .wrapper
-      aside.left-sideber 
-        include components/menu.pug 
+      aside.left-sideber  
         +menu('users')
-        include components/statistics.pug 
         +statistics()
       main.main 
-        include components/pageinfo.pug 
         +page-info('Пользователи', '', 'drop3')
         +premium-blocks(3) 
-      include components/deal.pug 
+        +users
       +deal()
 
     script(src="scripts/jquery.js") 
