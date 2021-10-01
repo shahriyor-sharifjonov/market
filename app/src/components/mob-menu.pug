@@ -1,5 +1,6 @@
 mixin mob-menu()
   .mob-menu 
+    .mob-menu-close(onclick="menuClose()")
     h2.mob-menu__title Меню
     form(action="").mob-menu__search
       button(type="submit").mob-menu__search-button

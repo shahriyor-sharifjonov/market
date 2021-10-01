@@ -10,6 +10,16 @@
   align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
+  &-close{
+    position: absolute;
+    top: 5px;
+    width: 32px;
+    height: 4px;
+    border-radius: 2px;
+    background: #555d6d;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   &.open{
     bottom: 0;
   }

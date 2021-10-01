@@ -20,7 +20,13 @@ if(document.querySelector('.fixed-menu__button')){
     )
       menuToggle();
   };
+
+  function menuClose(){
+    headerMenu.classList.remove('open')
+  }
 }
+
+
 
 const ripple = document.querySelectorAll('.ripple')
 ripple.forEach(btn => {
