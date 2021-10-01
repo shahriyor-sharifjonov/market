@@ -1,7 +1,7 @@
 // Header Menu
-if(document.querySelector('.header__button')){
+if(document.querySelector('.fixed-menu__button')){
   const headerButton: HTMLButtonElement =
-  document.querySelector(".header__button");
+  document.querySelector(".fixed-menu__button");
   const headerMenu: HTMLUListElement = document.querySelector(".mob-menu");
   let menuOpened = false;
   const menuToggle = () => {
@@ -78,7 +78,8 @@ $('.premium-blocks').slick({
   arrows: false,
   dots: true,
   autoplay: true,
-  autoplaySpeed: 2000,
+  autoplaySpeed: 4000,
+  speed: 800,
   centerPadding: '50px',
   responsive: [
     {
