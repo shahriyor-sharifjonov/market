@@ -148,3 +148,19 @@ $(document).ready(function() {
     }
   });
 });
+
+
+function notificationsBtnCheck(el){
+  el.classList.add('checked');
+}
+
+function openNotifications(){
+  const notificationsPopup = document.querySelector('.notifications.popup')
+  notificationsPopup.classList.add('active')
+}
+
+window.addEventListener('click', function(e){
+  if(e.target.classList.contains('popup') && e.target.classList.contains('active')){
+    e.target.classList.remove('active')
+  }
+})

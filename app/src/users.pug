@@ -19,6 +19,7 @@ html(lang="en")
     include components/deal.pug 
     include components/pageinfo.pug 
     include components/mob-menu.pug 
+    include components/popups.pug 
     +header
     +mob-menu
     .wrapper
@@ -31,6 +32,7 @@ html(lang="en")
         +users
       +deal()
     +fixed-menu('users')
+    +popups()
 
     script(src="scripts/jquery.js") 
     script(src="scripts/slick.min.js") 

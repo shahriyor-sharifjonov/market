@@ -10,7 +10,7 @@ mixin header()
         button(type="submit").header__search-btn 
           img(src="images/search.svg", alt="search").header__search-btn-img 
       .header__right 
-        button(type="button" notifications="21").header__bell 
+        button(type="button" notifications="21" onclick="openNotifications()").header__bell 
           img(src="images/bell.svg", alt="bell").header__bell-img 
         .header__user 
           .header__user-content 
