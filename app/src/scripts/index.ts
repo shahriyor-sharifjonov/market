@@ -181,4 +181,7 @@ function closePopup(){
   });
 } 
 
-
+function openMarketPopup(){
+  const marketPopup = document.querySelector('.market-popup.popup')
+  marketPopup.classList.add('active')
+}

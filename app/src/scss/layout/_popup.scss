@@ -18,8 +18,8 @@
     visibility: visible;
   }
   &__body{
-    background: #394863CC;
-    box-shadow: 0px 4px 30px 0px #00000099;
+    background: #303C51;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(5px);
     border-radius: 25px;
     padding: 30px;
@@ -28,6 +28,7 @@
   }
   &__content{
     overflow-y: auto;
+    overflow-x: hidden;
     max-height: 100%;
     height: max-content;
   }
@@ -76,5 +77,133 @@
   &__textarea{
     min-height: 150px;
     resize: none;
+    &.small{
+      min-height: 80px;
+    }
+  }
+  .dropdown__button span{
+    background: #303C51;
+  }
+  &__small{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 120.5%;
+    color: #E8EFFF;
+  }
+  &__images{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    &-item{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      box-sizing: border-box;
+      border-radius: 50%;
+      position: relative;
+      border: 2px solid #2C3A52;
+      img{
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 50%;
+        border: 2px solid #2C3A52;
+        transition: 200ms ease-in-out;
+      }
+      input{
+        width: 40px;
+        height: 40px;
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        &:checked{
+          &~img{
+            border: 2px solid #CA9CFF;
+          }
+        }
+      }
+    }
+  }
+  &__dropdown{
+    width: 100%;
+    margin-bottom: 27px;
+    &-button{
+      max-width: 100%;
+      width: 100%;
+      border: 3px solid #5C6F90;
+      padding-left: 10px;
+      height: 50px;
+      span{
+        position: absolute;
+        top: -10px;
+        left: 15px;
+        background: #303C51;
+        padding: 0 10px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 120.5%;
+      }
+    }
+  }
+}
+.market-popup{
+  & .popup{
+    &__body{
+      @include media($sm){
+        padding: 25px 10px;
+      }
+    }
+    &__small{
+      margin-bottom: 10px;
+    }
+    &__images{
+      margin-bottom: 20px;
+    }
+  }
+  .popup__row{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .faq-popup__calc{
+    margin-top: 2px;
+    margin-bottom: 6px;
+  }
+  .rouble{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+  }
+  input[type="number"]{
+    padding-right: 34px;
+  }
+  .popup__row{
+    margin-bottom: 20px;
+  }
+  .chk-i{
+    margin-right: 8px;
+  }
+  .popup__btns{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 12px;
+    button{
+      width: calc(50% - 4px);
+      background: #5C6F90;
+      &.border{
+        border: 2px solid #A25DF0;
+      }
+    }
+    &~button[type="submit"]{
+      width: 100%;
+    }
   }
 }
