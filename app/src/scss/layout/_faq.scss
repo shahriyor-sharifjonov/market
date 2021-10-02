@@ -63,4 +63,23 @@
       }
     }
   }
+  &-popup{
+    &__body{
+      max-width: 511px;
+      width: 100%;
+      height: max-content !important;
+      @include media($sm){
+        padding: 25px 15px;
+      }
+    }
+    &__calc{
+      width: max-content;
+      margin-left: auto;
+      margin-bottom: 20px;
+      margin-top: 10px;
+    }
+    &__title{
+      margin-bottom: 30px !important;
+    }
+  }
 }

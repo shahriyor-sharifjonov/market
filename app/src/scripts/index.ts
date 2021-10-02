@@ -111,7 +111,7 @@ $('.premium-blocks').slick({
       }
     },
     {
-      breakpoint: 667,
+      breakpoint: 661,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -159,6 +159,12 @@ function openNotifications(){
   notificationsPopup.classList.add('active')
 }
 
+function openFaqPopup(){
+  const faqPopup = document.querySelector('.faq-popup.popup')
+  faqPopup.classList.add('active')
+}
+
+
 window.addEventListener('click', function(e){
   if(e.target.classList.contains('popup') && e.target.classList.contains('active')){
     e.target.classList.remove('active')
@@ -171,3 +177,5 @@ function closePopup(el){
     popupCloseBtn.classList.remove('active')
   }
 } 
+
+
