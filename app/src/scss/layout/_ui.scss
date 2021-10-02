@@ -60,7 +60,7 @@ a{
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  @include media($sm){
+  @include media($lg){
     padding: 20px 15px 100px 15px;
   }
 }
