@@ -165,17 +165,20 @@ function openFaqPopup(){
 }
 
 
-window.addEventListener('click', function(e){
-  if(e.target.classList.contains('popup') && e.target.classList.contains('active')){
-    e.target.classList.remove('active')
+window.addEventListener('click', function(e :MouseEvent){
+  const el :HTMLElement = e.target 
+  if(el.classList.contains('popup') && el.classList.contains('active')){
+    el.classList.remove('active')
   }
 })
 
-function closePopup(el){
-  const popupCloseBtn = el.parentNode.parentNode.parentNode.parentNode.parentNode;
-  if(popupCloseBtn.classList.contains('popup') && popupCloseBtn.classList.contains('active')){
-    popupCloseBtn.classList.remove('active')
-  }
+function closePopup(){
+  const popups = document.querySelectorAll('.popup')
+  popups.forEach(el => {
+    if(el.classList.contains('active')){
+      el.classList.remove('active')
+    }
+  });
 } 
 
 
