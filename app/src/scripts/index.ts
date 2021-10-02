@@ -31,8 +31,6 @@ if(document.querySelector('.fixed-menu__button')){
 const ripple = document.querySelectorAll('.ripple')
 ripple.forEach(btn => {
   btn.addEventListener('click', function(e){
-    console.log('click');
-    
     let x = e.clientX - e.target.offsetLeft;
     let y = e.clientY - e.target.offsetTop;
     let ripples = document.createElement('span');
