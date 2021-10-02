@@ -2,6 +2,9 @@
   &__body{
     max-width: 345px;
     width: 100%;
+    @include media(400){
+      padding: 25px 15px;
+    }
   }
   &__item{
     background: #43526B;
