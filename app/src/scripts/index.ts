@@ -140,20 +140,10 @@ $(document).ready(function() {
 });
 
 
+
 function notificationsBtnCheck(el){
   el.classList.add('checked');
 }
-
-function openNotifications(){
-  const notificationsPopup = document.querySelector('.notifications.popup')
-  notificationsPopup.classList.add('active')
-}
-
-function openFaqPopup(){
-  const faqPopup = document.querySelector('.faq-popup.popup')
-  faqPopup.classList.add('active')
-}
-
 
 window.addEventListener('click', function(e :MouseEvent){
   const el :HTMLElement = e.target 
@@ -171,9 +161,24 @@ function closePopup(){
   });
 } 
 
+function openNotifications(){
+  const notificationsPopup = document.querySelector('.notifications.popup')
+  notificationsPopup.classList.add('active')
+}
+
+function openFaqPopup(){
+  const faqPopup = document.querySelector('.faq-popup.popup')
+  faqPopup.classList.add('active')
+}
+
 function openMarketPopup(){
   const marketPopup = document.querySelector('.market-popup.popup')
   marketPopup.classList.add('active')
+}
+
+function openArbitaj(){
+  const arbitajPopup = document.querySelector('.arbitaj.popup')
+  arbitajPopup.classList.add('active')
 }
 
 
