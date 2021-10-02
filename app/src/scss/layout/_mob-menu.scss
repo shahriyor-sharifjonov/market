@@ -82,6 +82,9 @@
   @include media(992){
     display: flex;
   }
+  @include media(340){
+    width: calc(100% - 15px);
+  }
   li{
     width: 48px;
     display: flex;

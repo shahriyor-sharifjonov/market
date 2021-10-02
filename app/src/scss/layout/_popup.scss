@@ -39,5 +39,17 @@
     line-height: 120.5%;
     color: #CA9CFF;
     margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__close{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 200ms ease-in-out;
+    &:focus,&:active{
+      transform: rotate(-90deg) scale(1.4);
+    }
   }
 }

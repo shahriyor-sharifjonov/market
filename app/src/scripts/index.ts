@@ -164,3 +164,10 @@ window.addEventListener('click', function(e){
     e.target.classList.remove('active')
   }
 })
+
+function closePopup(el){
+  const popupCloseBtn = el.parentNode.parentNode.parentNode.parentNode.parentNode;
+  if(popupCloseBtn.classList.contains('popup') && popupCloseBtn.classList.contains('active')){
+    popupCloseBtn.classList.remove('active')
+  }
+} 
