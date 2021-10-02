@@ -1,3 +1,11 @@
 include notifications.pug 
 mixin popups()
   +notifications
+  .popup.delete 
+    .popup__body 
+      .popup__content 
+        .popup__inner 
+          p.popup__p.big Вы уверены что хотите удалить <br>обьявление?
+          .popup__btns 
+            button(type="button" anim="ripple" onclick="closePopup()").popup__btn.btn Да, я понимаю что делаю
+            button(type="button" anim="ripple").popup__btn.btn.gray Нет

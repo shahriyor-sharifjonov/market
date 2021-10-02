@@ -3,11 +3,11 @@ mixin page-info(title, btn, drop)
     .page-info__left
       h1.page-info__title #{title}
       if title === 'FAQ' && btn !== ''
-        button(type="button" onclick="openFaqPopup()").btn.page-info__btn.ripple #{btn}
+        button(type="button" onclick="openFaqPopup()" anim="ripple").btn.page-info__btn.ripple #{btn}
       if title === 'Благотворительность' && btn !== ''
-        button(type="button" onclick="openCharityPopup()").btn.page-info__btn.ripple #{btn}
+        button(type="button" onclick="openCharityPopup()" anim="ripple").btn.page-info__btn.ripple #{btn}
       if title === 'Маркет' && btn !== ''
-        button(type="button" onclick="openMarketPopup()").btn.page-info__btn.ripple #{btn}
+        button(type="button" onclick="openMarketPopup()" anim="ripple").btn.page-info__btn.ripple #{btn}
     if drop === 'drop1'
       .dropdown 
         button(type="button" onclick="openDrop(this)").dropdown__button 

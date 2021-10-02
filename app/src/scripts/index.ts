@@ -26,24 +26,14 @@ if(document.querySelector('.fixed-menu__button')){
   }
 }
 
-
-
-const ripple = document.querySelectorAll('.ripple')
-ripple.forEach(btn => {
-  btn.addEventListener('click', function(e){
-    let x = e.clientX - e.target.offsetLeft;
-    let y = e.clientY - e.target.offsetTop;
-    let ripples = document.createElement('span');
-    ripples.style.left = x + 'px';
-    ripples.style.top = y + 'px';
-    this.appendChild(ripples);
-
-    setTimeout(() => {
-      ripples.remove()
-    }, 500);
+[].map.call(document.querySelectorAll('[anim="ripple"]'), el=> {
+  el.addEventListener('click',e => {
+      e = e.touches ? e.touches[0] : e;
+      const r = el.getBoundingClientRect(), d = Math.sqrt(Math.pow(r.width,2)+Math.pow(r.height,2)) * 2;
+      el.style.cssText = `--s: 0; --o: 1;`;  el.offsetTop; 
+      el.style.cssText = `--t: 1; --o: 0; --d: ${d}; --x:${e.clientX - r.left}; --y:${e.clientY - r.top};`
   })
 })
-
 
 const openDrop = (el) => {
   el.classList.toggle('active');
@@ -185,3 +175,5 @@ function openMarketPopup(){
   const marketPopup = document.querySelector('.market-popup.popup')
   marketPopup.classList.add('active')
 }
+
+

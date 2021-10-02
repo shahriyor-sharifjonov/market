@@ -33,7 +33,7 @@ html(lang="en")
       +deal()
     +fixed-menu('index')
     +popups()
-    .popup.market-popup.active
+    .popup.market-popup
       .popup__body 
         .popup__content 
           .popup__inner 
@@ -95,9 +95,9 @@ html(lang="en")
                   .chk-i 
                 label(for="popupchk") Не фиксированная сумма
               .popup__btns 
-                button(type="button").btn.ripple.popup__btn.gray.border АВТО-АП
-                button(type="button").btn.ripple.popup__btn.gray Выделить
-              button(type="submit").btn.ripple.popup__btn.popup__close Разместить объявление  
+                button(type="button" anim="ripple").btn.ripple.popup__btn.gray.border АВТО-АП
+                button(type="button" anim="ripple").btn.ripple.popup__btn.gray Выделить
+              button(type="submit" anim="ripple").btn.ripple.popup__btn.popup__close Разместить объявление  
 
     script(src="scripts/jquery.js") 
     script(src="scripts/slick.min.js") 
