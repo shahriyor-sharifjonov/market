@@ -186,4 +186,14 @@ function openContent(){
   contentPopup.classList.add('active')
 }
 
+function completeDealPopup(){
+  const completeDealPopup = document.querySelector('.popup.complete-deal')
+  completeDealPopup.classList.add('active')
+}
+
+function rejectDealPopup(){
+  const rejectDealPopup = document.querySelector('.popup.reject-deal')
+  rejectDealPopup.classList.add('active')
+}
+
 

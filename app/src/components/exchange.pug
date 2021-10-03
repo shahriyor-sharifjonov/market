@@ -22,8 +22,8 @@ mixin exchange(mode)
         p.announcement-price__p 0.00412 BTC
     .exchange-event 
       if mode === 'seller'
-        button(type="button" anim="ripple").exchange__btn.green.ripple Принять сделку
-        button(type="button" anim="ripple").exchange__btn.red.ripple Отказаться
+        button(type="button" anim="ripple" onclick="completeDealPopup()").exchange__btn.green.ripple Принять сделку
+        button(type="button" anim="ripple" onclick="rejectDealPopup()").exchange__btn.red.ripple Отказаться
       if mode === 'buyer'
         button(type="button" anim="ripple").exchange__btn.green.ripple Завершить сделку
         button(type="button" anim="ripple" onclick="openArbitaj()").exchange__btn.red.ripple Арбитраж
