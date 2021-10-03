@@ -8,7 +8,7 @@ mixin profile-content()
           h2.profile__banner-title AlexMan
             img(src="images/verified.svg", alt="")
           .profile__banner-balance <span class="green">10 256 ₽</span> / <span class="yellow">0.00082 btc</span> 
-            button(type="button").profile__banner-balance-btn 
+            button(type="button" onclick="withdrawPopup()").profile__banner-balance-btn 
               img(src="images/add.svg", alt="")  
             button(type="button" onclick="transactionHistoryPopup()").profile__banner-balance-btn 
               img(src="images/document-btn.svg", alt="")  

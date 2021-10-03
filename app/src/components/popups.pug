@@ -97,6 +97,22 @@ mixin popups()
             p.popup__item-p Пополнение с помощью кошелька 3Hdka78Jddajfcma832dscks
           .popup__item  
             p.popup__item-p Пополнение с помощью кошелька 3Hdka78Jddajfcma832dscks
-
-
+  .popup.withdraw 
+    .popup__body 
+      .popup__content 
+        .popup__inner
+          h2.faq-popup__title.popup__title Пополнить счёт
+            button(type="button" onclick="closePopup()").popup__close 
+              svg(width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg")
+                path(d="M13.1906 4.70532L8.94685 8.99392L4.75004 13.2351" stroke="#222628" stroke-width="1.4" stroke-linecap="round")
+                path(d="M4.70532 4.75L8.97023 8.97026L13.2351 13.1905" stroke="#222628" stroke-width="1.4" stroke-linecap="round")
+          form(action="").popup__form 
+            p.popup__label Ваш личный BTC адрес:
+            input(type="text" required).popup__input
+            p.popup__label Все платежи отправленные на Ваш адрес BTC отобразятся на счету после двух подтверждений
+            textarea(type="text" placeholder="В данное поле Вы можете вставить чек созданный ботом @BTC_CHANGE_BOT и нажать кнопку ниже.").popup__input.big
+            button(type="submit" anim="ripple").btn.big Пополнить чеком BTC Banker
+            .popup__btns 
+              button(type="button" anim="ripple" onclick="payoutPopup()").btn.mid Вывод
+              button(type="button" anim="ripple" onclick="transactionHistoryPopup()").btn.mid История
 

@@ -221,4 +221,16 @@ function transactionHistoryPopup(){
   transactionHistoryPopup.classList.add('active')
 }
 
+function withdrawPopup(){
+  closePopup()
+  const withdrawPopup = document.querySelector('.withdraw.popup')
+  withdrawPopup.classList.add('active')
+}
+
+function payoutPopup(){
+  closePopup()
+  const payoutPopup  = document.querySelector('.payout.popup')
+  payoutPopup .classList.add('active')
+}
+
 
