@@ -139,7 +139,17 @@ $(document).ready(function() {
   });
 });
 
-
+window.addEventListener('click', function(e){
+  if(e.target.classList.contains('heart')){
+    e.target.classList.toggle('active')
+  }
+  if(e.target.classList.contains('heart-bg')){
+    e.target.parentNode.parentNode.parentNode.classList.toggle('active')
+  }
+  if(e.target.classList.contains('heart-border')){
+    e.target.parentNode.parentNode.parentNode.classList.toggle('active')
+  }
+})
 
 function notificationsBtnCheck(el){
   el.classList.add('checked');

@@ -302,3 +302,22 @@ label{
       transform-origin: center;
   }
 }
+
+.heart{
+  &.active{
+    .heart-bg{
+      fill: #FF6464;
+    }
+    .heart-border{
+      fill: #FF6464;
+    }
+  }
+  &-bg{
+    fill: transparent;
+    transition: 200ms ease-in-out;
+  }
+  &-border{
+    fill: #fff;
+    transition: 200ms ease-in-out;
+  }
+}
