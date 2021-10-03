@@ -98,6 +98,29 @@ html(lang="en")
                 button(type="button" anim="ripple").btn.ripple.popup__btn.gray.border АВТО-АП
                 button(type="button" anim="ripple").btn.ripple.popup__btn.gray Выделить
               button(type="submit" anim="ripple").btn.ripple.popup__btn.popup__close Разместить объявление  
+    .popup.market-content.active
+      .popup__body 
+        .popup__content 
+          .popup__inner 
+            .popup__top(style="background: linear-gradient(0.69deg, #303C52 40.79%, #303D52 42.68%, rgba(48, 60, 82, 0) 98.48%), url(images/item-bg-3.png) center / cover no-repeat, linear-gradient(0deg, #303C52, #303C52), #303C51") 
+              +item-info('avatar', '@MegaDupka', 'no', 'yes', 'no', 'white') 
+              button(type="button" onclick="closePopup()").popup__close 
+                img(src="images/popup-close.svg", alt="")
+              .popup-row 
+                .popup-col
+                  img(src="images/money.svg", alt="").popup-col__img
+                  p.popup-col__p Депозит: 5000₽
+                .popup-col
+                  img(src="images/discussion.svg", alt="").popup-col__img
+                  p.popup-col__p Сделки: 450
+              h2.popup__title Ищу отель на сайте Expodia 5 звезд новый оплата наличными писать
+              p.popup__category Категория: Отели
+            .popup__inner-content
+              .popup__ps
+                p.popup__p Отель 5 звезд требуется очень сильно ищу помогив поиске я нахожусь в очень сильном поиске. <br>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+              .popup__btns 
+                button(type="button" anim="ripple").popup__btn.btn Начать сделку
+                button(type="button" anim="ripple").popup__btn.btn Пожаловаться
 
     script(src="scripts/jquery.js") 
     script(src="scripts/slick.min.js") 

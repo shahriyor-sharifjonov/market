@@ -181,4 +181,9 @@ function openArbitaj(){
   arbitajPopup.classList.add('active')
 }
 
+function openContent(){
+  const contentPopup = document.querySelector('.popup.market-content')
+  contentPopup.classList.add('active')
+}
+
 

@@ -101,6 +101,7 @@
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+    cursor: pointer;
   }
   &__p{
     font-family: Inter;
@@ -111,6 +112,7 @@
     text-align: justify;
     color: #92A8D0;
     margin-bottom: 28px;
+    cursor: pointer;
     @include media($md){
       text-align: left;
       overflow: hidden;

@@ -24,7 +24,7 @@
     border-radius: 25px;
     padding: 30px 0px 30px 30px;
     max-height: 100%;
-    height: 100%;
+    height: 500px;
     @include media($sm){
       padding: 25px 0 25px 15px;
     }
@@ -112,6 +112,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+
     &-item{
       display: flex;
       align-items: center;
@@ -122,6 +123,7 @@
       border-radius: 50%;
       position: relative;
       border: 2px solid #2C3A52;
+      cursor: pointer;
       img{
         max-width: 100%;
         max-height: 100%;
@@ -137,6 +139,7 @@
         top: 0;
         left: 0;
         opacity: 0;
+        cursor: pointer;
         &:checked{
           &~img{
             border: 2px solid #CA9CFF;
@@ -315,6 +318,111 @@
     }
     .popup__content{
       padding: 0 30px 0 0;
+    }
+  }
+}
+
+.market-content{
+  .popup__close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .popup__body{
+    max-width: 511px;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+  }
+  .popup__content{
+    padding: 0;
+    margin-right: -12px;
+    height: 100%;
+  }
+  .popup__inner{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .item-info{
+    margin-bottom: 18px;
+  }
+  .popup__top{
+    border-radius: 26px;
+    padding: 30px;
+  }
+  .popup-row{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 23px;
+  }
+  .popup-col{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    &:first-child{
+      margin-right: 15px;
+    }
+    &__img{
+      margin-right: 8px;
+    }
+    &__p{
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 143.6%;
+      color: #FFFFFF;
+    }
+  }
+  .popup__btns{
+    padding: 18px 0 30px 0;
+    button{
+      &:first-child{
+        margin-right: 17px;
+      }
+      &:last-child{
+        background: #4D5C75;
+      }
+    }
+  }
+  .popup__title{
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 120%;
+    color: #FFFFFF;
+    margin-bottom: 14px;
+    @include media($sm){
+      font-size: 18px;
+    }
+  }
+  .popup__category{
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 120%;
+    color: #CA9CFF;
+  }
+  .popup__inner-content{
+    padding: 18px 30px 0 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .popup__btn{
+    @include media($sm){
+      font-size: 16px;
+    }
+    @include media(420){
+      width: 100%;
+      &:first-child{
+        margin-bottom: 8px;
+      }
     }
   }
 }
