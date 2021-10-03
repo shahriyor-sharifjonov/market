@@ -176,6 +176,11 @@
       @include media($md){
         width: 50%;
       }
+      &:nth-child(3){
+        @include media($md){
+          margin-bottom: 0 !important;
+        }
+      }
       &:not(:last-child){
         margin-right: 20px;
         @include media($md){

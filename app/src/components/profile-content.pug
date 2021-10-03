@@ -10,7 +10,7 @@ mixin profile-content()
           .profile__banner-balance <span class="green">10 256 ₽</span> / <span class="yellow">0.00082 btc</span> 
             button(type="button").profile__banner-balance-btn 
               img(src="images/add.svg", alt="")  
-            button(type="button").profile__banner-balance-btn 
+            button(type="button" onclick="transactionHistoryPopup()").profile__banner-balance-btn 
               img(src="images/document-btn.svg", alt="")  
           .profile__banner-stars 
             img(src="images/stars.svg", alt="").profile__banner-stars-img

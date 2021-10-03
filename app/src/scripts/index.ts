@@ -215,4 +215,10 @@ function finishDealPopup(){
   finishDealPopup.classList.add('active')
 }
 
+function transactionHistoryPopup(){
+  closePopup()
+  const transactionHistoryPopup = document.querySelector('.transaction-history.popup')
+  transactionHistoryPopup.classList.add('active')
+}
+
 

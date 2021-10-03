@@ -591,3 +591,27 @@
     margin-top: 42px;
   }
 }
+
+.transaction-history{
+  .popup__body{
+    max-width: 524px;
+    width: 100%;
+  }
+  .popup__item{
+    border: 3px solid #5C6F90;
+    box-sizing: border-box;
+    border-radius: 9px;
+    padding: 10px;
+    &:not(:last-child){
+      margin-bottom: 15px;
+    }
+    &-p{
+      font-family: Inter;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 120.5%;
+      color: #FFFFFF;
+    }
+  }
+}
