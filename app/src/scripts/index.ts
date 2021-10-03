@@ -229,8 +229,8 @@ function withdrawPopup(){
 
 function payoutPopup(){
   closePopup()
-  const payoutPopup  = document.querySelector('.payout.popup')
-  payoutPopup .classList.add('active')
+  const payoutPopup = document.querySelector('.payout.popup')
+  payoutPopup.classList.add('active')
 }
 
 
