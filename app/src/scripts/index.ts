@@ -162,38 +162,57 @@ function closePopup(){
 } 
 
 function openNotifications(){
+  closePopup()
   const notificationsPopup = document.querySelector('.notifications.popup')
   notificationsPopup.classList.add('active')
 }
 
 function openFaqPopup(){
+  closePopup()
   const faqPopup = document.querySelector('.faq-popup.popup')
   faqPopup.classList.add('active')
 }
 
 function openMarketPopup(){
+  closePopup()
   const marketPopup = document.querySelector('.market-popup.popup')
   marketPopup.classList.add('active')
 }
 
 function openArbitaj(){
+  closePopup()
   const arbitajPopup = document.querySelector('.arbitaj.popup')
   arbitajPopup.classList.add('active')
 }
 
 function openContent(){
+  closePopup()
   const contentPopup = document.querySelector('.popup.market-content')
   contentPopup.classList.add('active')
 }
 
+function offerCostPopup(){
+  closePopup()
+  const offerCostPopup = document.querySelector('.popup.offer-cost')
+  offerCostPopup.classList.add('active')
+}
+
 function completeDealPopup(){
+  closePopup()
   const completeDealPopup = document.querySelector('.popup.complete-deal')
   completeDealPopup.classList.add('active')
 }
 
 function rejectDealPopup(){
+  closePopup()
   const rejectDealPopup = document.querySelector('.popup.reject-deal')
   rejectDealPopup.classList.add('active')
+}
+
+function finishDealPopup(){
+  closePopup()
+  const finishDealPopup = document.querySelector('.popup.finish-deal')
+  finishDealPopup.classList.add('active')
 }
 
 

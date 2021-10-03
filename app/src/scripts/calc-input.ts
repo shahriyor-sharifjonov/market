@@ -56,7 +56,7 @@ if(document.querySelector('.symbols-4')){
 
 if(document.querySelector('.symbols-5')){
   let sy5 = document.querySelector('.symbols-5');
-  let i5 = document.querySelector('.in-4').value;
+  let i5 = document.querySelector('.in-5').value;
   
   let res5 = i5.length;
   sy5.innerHTML = res5 + '/' + '64'
@@ -65,6 +65,20 @@ if(document.querySelector('.symbols-5')){
     let i5 = document.querySelector('.in-5').value;
     res5 = i5.length;
     sy5.innerHTML = res5 + '/' + '64'
+  }, 100);
+}
+
+if(document.querySelector('.symbols-6')){
+  let sy6 = document.querySelector('.symbols-6');
+  let i6 = document.querySelector('.in-6').value;
+  
+  let res6 = i6.length;
+  sy6.innerHTML = res6 + '/' + '64'
+  
+  let interval6 = setInterval(function() {
+    let i6 = document.querySelector('.in-6').value;
+    res6 = i6.length;
+    sy6.innerHTML = res6 + '/' + '64'
   }, 100);
 }
 
