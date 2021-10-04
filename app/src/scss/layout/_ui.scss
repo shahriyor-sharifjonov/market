@@ -37,6 +37,9 @@ body{
   background: #222D41;
   color: #fff;
   overflow-y: scroll;
+  &.overflow-hidden{
+    overflow: hidden;
+  }
 }
 button{
   font-family: inherit;

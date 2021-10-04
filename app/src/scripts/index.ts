@@ -139,6 +139,8 @@ $(document).ready(function() {
   });
 });
 
+const body = document.querySelector('body');
+
 window.addEventListener('click', function(e){
   if(e.target.classList.contains('heart')){
     e.target.classList.toggle('active')
@@ -167,6 +169,7 @@ window.addEventListener('click', function(e :MouseEvent){
   const el :HTMLElement = e.target 
   if(el.classList.contains('popup') && el.classList.contains('active')){
     el.classList.remove('active')
+    body.classList.remove('overflow-hidden')
   }
 })
 
@@ -175,6 +178,7 @@ function closePopup(){
   popups.forEach(el => {
     if(el.classList.contains('active')){
       el.classList.remove('active')
+      body.classList.remove('overflow-hidden')
     }
   });
 } 
@@ -183,72 +187,84 @@ function openNotifications(){
   closePopup()
   const notificationsPopup = document.querySelector('.notifications.popup')
   notificationsPopup.classList.add('active')
+  body.classList.add('overflow-hidden')
 }
 
 function openFaqPopup(){
   closePopup()
   const faqPopup = document.querySelector('.faq-popup.popup')
   faqPopup.classList.add('active')
+  body.classList.add('overflow-hidden')
 }
 
 function openMarketPopup(){
   closePopup()
   const marketPopup = document.querySelector('.market-popup.popup')
   marketPopup.classList.add('active')
+  body.classList.add('overflow-hidden')
 }
 
 function openArbitaj(){
   closePopup()
   const arbitajPopup = document.querySelector('.arbitaj.popup')
   arbitajPopup.classList.add('active')
+  body.classList.add('overflow-hidden')
 }
 
 function openContent(){
   closePopup()
   const contentPopup = document.querySelector('.popup.market-content')
   contentPopup.classList.add('active')
+  body.classList.add('overflow-hidden')
 }
 
 function offerCostPopup(){
   closePopup()
   const offerCostPopup = document.querySelector('.popup.offer-cost')
   offerCostPopup.classList.add('active')
+  body.classList.add('overflow-hidden')
 }
 
 function completeDealPopup(){
   closePopup()
   const completeDealPopup = document.querySelector('.popup.complete-deal')
   completeDealPopup.classList.add('active')
+  body.classList.add('overflow-hidden')
 }
 
 function rejectDealPopup(){
   closePopup()
   const rejectDealPopup = document.querySelector('.popup.reject-deal')
   rejectDealPopup.classList.add('active')
+  body.classList.add('overflow-hidden')
 }
 
 function finishDealPopup(){
   closePopup()
   const finishDealPopup = document.querySelector('.popup.finish-deal')
   finishDealPopup.classList.add('active')
+  body.classList.add('overflow-hidden')
 }
 
 function transactionHistoryPopup(){
   closePopup()
   const transactionHistoryPopup = document.querySelector('.transaction-history.popup')
   transactionHistoryPopup.classList.add('active')
+  body.classList.add('overflow-hidden')
 }
 
 function withdrawPopup(){
   closePopup()
   const withdrawPopup = document.querySelector('.withdraw.popup')
   withdrawPopup.classList.add('active')
+  body.classList.add('overflow-hidden')
 }
 
 function payoutPopup(){
   closePopup()
   const payoutPopup = document.querySelector('.payout.popup')
   payoutPopup.classList.add('active')
+  body.classList.add('overflow-hidden')
 }
 
 
