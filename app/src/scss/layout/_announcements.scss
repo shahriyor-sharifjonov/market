@@ -48,7 +48,8 @@
     max-width: 100%;
   }
   &.active{
-    border: 3px solid #FFD600
+    border: 3px solid #FFD600;
+    animation: openBorder 1s 1;
   }
   &-top{
     display: flex;
@@ -159,5 +160,14 @@
         font-size: 14px;
       }
     }
+  }
+}
+
+@keyframes openBorder {
+  0%{
+    border: 3px solid transparent;
+  }
+  100%{
+    border: 3px solid #FFD600;
   }
 }
