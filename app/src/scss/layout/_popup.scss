@@ -67,6 +67,9 @@
     align-items: center;
     justify-content: center;
     transition: 200ms ease-in-out;
+    position: absolute;
+    right: 0px;
+    top: 0px;
   }
   &__input{
     border: 3px solid #5C6F90;
@@ -217,8 +220,10 @@
     button{
       width: calc(50% - 4px);
       background: #5C6F90;
+      border: 2px solid transparent;
       &.border{
         border: 2px solid #A25DF0;
+        transition: 200ms ease-in-out;
       }
     }
     &~button[type="submit"]{

@@ -151,6 +151,14 @@ window.addEventListener('click', function(e){
   }
 })
 
+function addBorder(el){
+  let borders = document.querySelectorAll('.popup__btn.gray');
+  borders.forEach(element => {
+    element.classList.remove('border')
+  });
+  el.classList.add('border')
+}
+
 function notificationsBtnCheck(el){
   el.classList.add('checked');
 }

@@ -16,9 +16,7 @@ mixin popups()
         .popup__inner 
           h2.faq-popup__title.popup__title.small Подтвердите действие
             button(type="button" onclick="closePopup()").popup__close 
-              svg(width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg")
-                path(d="M13.1906 4.70532L8.94685 8.99392L4.75004 13.2351" stroke="#222628" stroke-width="1.4" stroke-linecap="round")
-                path(d="M4.70532 4.75L8.97023 8.97026L13.2351 13.1905" stroke="#222628" stroke-width="1.4" stroke-linecap="round")
+              img(src="images/popup-close.svg", alt="")
           p.arbitaj__p Арбитраж #18389
           p.arbitaj__p.mb-18 Ответчик: @MegaDupka
           p.arbitaj__p Опишите детали арбитража:
@@ -30,10 +28,8 @@ mixin popups()
       .popup__content 
         .popup__inner
           h2.faq-popup__title.popup__title.small Подтвердите действие
-            button(type="button" onclick="closePopup()").popup__close 
-              svg(width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg")
-                path(d="M13.1906 4.70532L8.94685 8.99392L4.75004 13.2351" stroke="#222628" stroke-width="1.4" stroke-linecap="round")
-                path(d="M4.70532 4.75L8.97023 8.97026L13.2351 13.1905" stroke="#222628" stroke-width="1.4" stroke-linecap="round")
+            button(type="button" onclick="closePopup()").popup__close
+              img(src="images/popup-close.svg", alt="")
           p.popup__p Заказчик @MegaDupka не установил <br>стоимость выполнения заказа.<br>Предложите свою  стоимость
           form(action="").popup__form
             input(type="number" placeholder="Введите стоимость" required).popup__input
@@ -43,10 +39,8 @@ mixin popups()
       .popup__content   
         .popup__inner
           h2.faq-popup__title.popup__title.small Подтвердите действие
-            button(type="button" onclick="closePopup()").popup__close 
-              svg(width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg")
-                path(d="M13.1906 4.70532L8.94685 8.99392L4.75004 13.2351" stroke="#222628" stroke-width="1.4" stroke-linecap="round")
-                path(d="M4.70532 4.75L8.97023 8.97026L13.2351 13.1905" stroke="#222628" stroke-width="1.4" stroke-linecap="round")
+            button(type="button" onclick="closePopup()").popup__close
+                img(src="images/popup-close.svg", alt="")
           p.popup__p Подтвердите выполненные условия сделки. После завершения сделки заказчиком вы получите оплату в размере 2000₽/0.0042 btc.
           button(type="button" onclick="closePopup()" anim="ripple").btn.green Подтвердить
   .popup.reject-deal
@@ -54,10 +48,8 @@ mixin popups()
       .popup__content   
         .popup__inner
           h2.faq-popup__title.popup__title.small Подтвердите действие
-            button(type="button" onclick="closePopup()").popup__close 
-              svg(width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg")
-                path(d="M13.1906 4.70532L8.94685 8.99392L4.75004 13.2351" stroke="#222628" stroke-width="1.4" stroke-linecap="round")
-                path(d="M4.70532 4.75L8.97023 8.97026L13.2351 13.1905" stroke="#222628" stroke-width="1.4" stroke-linecap="round")
+            button(type="button" onclick="closePopup()").popup__close
+              img(src="images/popup-close.svg", alt="")
           p.popup__p Внимание, если вы передали товар/выполнили сделку - не отменяйте ее, вам необходимо ПОДТВЕРДИТЬ ВЫПОЛНЕНЕНИЕ условий сделки.
           button(type="button" onclick="closePopup()" anim="ripple").btn.red Отменить
   .popup.finish-deal 
@@ -65,10 +57,8 @@ mixin popups()
       .popup__content 
         .popup__inner
           h2.faq-popup__title.popup__title Завершить сделку
-            button(type="button" onclick="closePopup()").popup__close 
-              svg(width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg")
-                path(d="M13.1906 4.70532L8.94685 8.99392L4.75004 13.2351" stroke="#222628" stroke-width="1.4" stroke-linecap="round")
-                path(d="M4.70532 4.75L8.97023 8.97026L13.2351 13.1905" stroke="#222628" stroke-width="1.4" stroke-linecap="round")
+            button(type="button" onclick="closePopup()").popup__close
+              img(src="images/popup-close.svg", alt="")
           p.popup__p Ищу отель на сайте Expodia 5 звезд наличными писать в лс 
           +item-info('avatar', 'MegaDupka', 'no', 'yes', 'no', 'white')
           form(action="").popup__form 
@@ -83,10 +73,8 @@ mixin popups()
       .popup__content 
         .popup__inner 
           h2.faq-popup__title.popup__title История платежей
-            button(type="button" onclick="closePopup()").popup__close 
-              svg(width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg")
-                path(d="M13.1906 4.70532L8.94685 8.99392L4.75004 13.2351" stroke="#222628" stroke-width="1.4" stroke-linecap="round")
-                path(d="M4.70532 4.75L8.97023 8.97026L13.2351 13.1905" stroke="#222628" stroke-width="1.4" stroke-linecap="round")
+            button(type="button" onclick="closePopup()").popup__close
+              img(src="images/popup-close.svg", alt="")
           .popup__item  
             p.popup__item-p Пополнение с помощью кошелька 3Hdka78Jddajfcma832dscks
           .popup__item  
@@ -102,10 +90,8 @@ mixin popups()
       .popup__content 
         .popup__inner
           h2.faq-popup__title.popup__title Пополнить счёт
-            button(type="button" onclick="closePopup()").popup__close 
-              svg(width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg")
-                path(d="M13.1906 4.70532L8.94685 8.99392L4.75004 13.2351" stroke="#222628" stroke-width="1.4" stroke-linecap="round")
-                path(d="M4.70532 4.75L8.97023 8.97026L13.2351 13.1905" stroke="#222628" stroke-width="1.4" stroke-linecap="round")
+            button(type="button" onclick="closePopup()").popup__close
+              img(src="images/popup-close.svg", alt="")
           form(action="").popup__form 
             p.popup__label Ваш личный BTC адрес:
             input(type="text" required).popup__input
@@ -113,14 +99,15 @@ mixin popups()
             textarea(type="text" placeholder="В данное поле Вы можете вставить чек созданный ботом @BTC_CHANGE_BOT и нажать кнопку ниже.").popup__input.big
             button(type="submit" anim="ripple").btn.big Пополнить чеком BTC Banker
             .popup__btns 
-              button(type="buttoadsdwadasd
+              button(type="button" anim="ripple" onclick="payoutPopup()").btn.mid Вывод
+              button(type="button" anim="ripple" onclick="transactionHistoryPopup()").btn.mid История
+  .popup.payout 
+    .popup__body 
       .popup__content 
         .popup__inner
           h2.faq-popup__title.popup__title Вывод средств
             button(type="button" onclick="closePopup()").popup__close 
-              svg(width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg")
-                path(d="M13.1906 4.70532L8.94685 8.99392L4.75004 13.2351" stroke="#222628" stroke-width="1.4" stroke-linecap="round")
-                path(d="M4.70532 4.75L8.97023 8.97026L13.2351 13.1905" stroke="#222628" stroke-width="1.4" stroke-linecap="round")
+              img(src="images/popup-close.svg", alt="")
           form(action="").popup__form 
             p.popup__label Укажите BTC адрес:
             input(type="text" required).popup__input
